@@ -196,6 +196,61 @@
       box-shadow: 0 9px 28px rgba(13,36,67,.055);
     }
 
+
+    .service-icons {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 44px;
+      margin: 0 0 16px;
+    }
+
+    .service-icon {
+      display: inline-grid;
+      width: 40px;
+      height: 40px;
+      place-items: center;
+      overflow: hidden;
+      border-radius: 11px;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 1.15rem;
+      font-weight: 900;
+      line-height: 1;
+      box-shadow: 0 5px 14px rgba(13,36,67,.13);
+    }
+
+    .service-icon.linkedin { background: #0a66c2; font-size: 1.08rem; }
+    .service-icon.facebook { background: #1877f2; font-family: Georgia, serif; font-size: 1.75rem; padding-top: 7px; }
+    .service-icon.instagram {
+      position: relative;
+      background: radial-gradient(circle at 30% 105%, #ffd600 0 18%, #ff7a00 38%, #e1306c 62%, #833ab4 82%, #405de6 100%);
+    }
+    .service-icon.instagram::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border: 2.5px solid #fff;
+      border-radius: 6px;
+    }
+    .service-icon.instagram::after {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      box-shadow: -6px 6px 0 -1px #fff;
+      transform: translate(7px,-7px);
+    }
+    .service-icon.page,
+    .service-icon.website {
+      border: 1px solid rgba(199,155,67,.58);
+      background: var(--navy);
+      color: var(--gold-light);
+      font-size: 1.22rem;
+    }
+
     .card.featured {
       border-color: rgba(199,155,67,.85);
       box-shadow: var(--shadow);
@@ -466,6 +521,7 @@
 
         <div class="packages">
           <article class="card">
+            <div class="service-icons" aria-label="LinkedIn service"><span class="service-icon linkedin" title="LinkedIn">in</span></div>
             <h3>LinkedIn Executive Presence</h3>
             <div class="price">20,000 THB <small>/ 1 month</small></div>
             <p class="best-for"><strong>Best for:</strong> Executives who want to start building a credible professional presence.</p>
@@ -481,6 +537,7 @@
           </article>
 
           <article class="card">
+            <div class="service-icons" aria-label="LinkedIn service"><span class="service-icon linkedin" title="LinkedIn">in</span></div>
             <h3>Executive LinkedIn Growth</h3>
             <div class="price">55,000 THB <small>/ 3 months</small></div>
             <p class="best-for"><strong>Best for:</strong> Executives who want consistent visibility and stronger professional positioning.</p>
@@ -497,6 +554,7 @@
 
           <article class="card featured">
             <span class="tag">Best value</span>
+            <div class="service-icons" aria-label="LinkedIn, Facebook and Instagram services"><span class="service-icon linkedin" title="LinkedIn">in</span><span class="service-icon facebook" title="Facebook">f</span><span class="service-icon instagram" title="Instagram"></span></div>
             <h3>Digital Presence Foundation</h3>
             <div class="price">60,000 THB <small>/ 3 months</small></div>
             <p class="best-for"><strong>Best for:</strong> Executives who want to start building their digital presence across LinkedIn and social channels.</p>
@@ -513,6 +571,7 @@
 
           <article class="card featured">
             <span class="tag">Most popular</span>
+            <div class="service-icons" aria-label="LinkedIn, Facebook, Instagram and landing page services"><span class="service-icon linkedin" title="LinkedIn">in</span><span class="service-icon facebook" title="Facebook">f</span><span class="service-icon instagram" title="Instagram"></span><span class="service-icon page" title="Landing page">↗</span></div>
             <h3>Executive Digital Ecosystem</h3>
             <div class="price">80,000 THB <small>/ 3 months</small></div>
             <p class="best-for"><strong>Best for:</strong> Executives, founders, and consultants who want a complete personal brand ecosystem.</p>
@@ -528,6 +587,7 @@
           </article>
 
           <article class="card">
+            <div class="service-icons" aria-label="Landing page service"><span class="service-icon page" title="Landing page">↗</span></div>
             <h3>Link in Bio Page</h3>
             <div class="price">10,000 THB <small>/ one-time project</small></div>
             <p class="best-for"><strong>Best for:</strong> Professionals who need a simple page to showcase their profile, work, and contact links.</p>
@@ -544,6 +604,7 @@
           </article>
 
           <article class="card">
+            <div class="service-icons" aria-label="Personal website service"><span class="service-icon website" title="Personal website">◎</span></div>
             <h3>Personal Website</h3>
             <div class="price">35,000 THB <small>/ one-time project</small></div>
             <p class="best-for"><strong>Best for:</strong> Executives or consultants who want a stronger professional presence beyond social media.</p>
