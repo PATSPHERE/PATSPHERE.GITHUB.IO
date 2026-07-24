@@ -4,110 +4,77 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d2443">
-  <meta name="description" content="PATSPHERE Executive Personal Branding packages that turn an inactive digital profile into a credible, visible professional presence.">
+  <meta name="description" content="PATSPHERE Executive Personal Branding packages for executives, founders, and consultants.">
   <meta property="og:title" content="PATSPHERE Executive Personal Branding">
-  <meta property="og:description" content="From an inactive profile to a professional presence people understand, trust, and remember.">
+  <meta property="og:description" content="Build a credible professional presence people understand, trust, and remember.">
   <meta property="og:type" content="website">
   <title>PATSPHERE | Executive Personal Branding</title>
   <style>
-    :root { --navy:#0d2443; --navy-2:#183858; --gold:#c79b43; --gold-light:#efe1bd; --ivory:#f8f5ee; --paper:#fffdf9; --ink:#1f2f42; --muted:#687486; --line:#ded7c8; --shadow:0 18px 45px rgba(13,36,67,.10); }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; color:var(--ink); background:var(--ivory); font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.6; }
-    a { color:inherit; }
-    .wrap { width:min(1120px,calc(100% - 36px)); margin-inline:auto; }
-    .topbar { position:sticky; top:0; z-index:10; border-bottom:1px solid rgba(255,255,255,.12); background:rgba(13,36,67,.96); backdrop-filter:blur(12px); }
-    .nav { min-height:66px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
-    .brand { color:#fff; font-family:Georgia,"Times New Roman",serif; font-size:1.03rem; letter-spacing:.17em; text-decoration:none; }
-    .nav-link { color:var(--gold-light); font-size:.82rem; font-weight:700; letter-spacing:.06em; text-decoration:none; text-transform:uppercase; }
-    .hero { position:relative; overflow:hidden; padding:0; background:#05080d; }
-    .hero-image { display:block; width:100%; height:auto; aspect-ratio:1024 / 424; object-fit:contain; object-position:center; }
-    .hero-fallback { display:none; min-height:420px; place-items:center; padding:64px 18px; color:#fff; text-align:center; background:radial-gradient(circle at 70% 20%,#24486d 0,#0d2443 40%,#05080d 100%); }
-    .hero-fallback h1 { max-width:820px; margin:0; font-family:Georgia,"Times New Roman",serif; font-weight:500; font-size:clamp(2.45rem,6vw,5rem); line-height:1.08; }
-    .value-strip { padding:42px 0; color:#fff; background:var(--navy); text-align:center; }
-    .value-strip h1 { max-width:880px; margin:0 auto 14px; font-family:Georgia,"Times New Roman",serif; font-size:clamp(2rem,4.5vw,3.7rem); font-weight:500; line-height:1.12; letter-spacing:-.03em; }
-    .value-strip p { max-width:740px; margin:0 auto; color:#d4deea; font-size:clamp(1rem,2vw,1.18rem); }
-    .gold { color:var(--gold-light); }
-    section { padding:78px 0; }
-    .eyebrow { margin:0 0 18px; color:var(--gold); font-size:.78rem; font-weight:800; letter-spacing:.18em; text-transform:uppercase; }
-    h2,h3 { margin-top:0; font-family:Georgia,"Times New Roman",serif; font-weight:500; line-height:1.12; }
-    .section-heading { max-width:780px; margin-bottom:34px; }
-    .section-heading h2 { margin-bottom:12px; color:var(--navy); font-size:clamp(2rem,4vw,3.2rem); letter-spacing:-.025em; }
-    .section-heading p { margin:0; color:var(--muted); }
-    .packages { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
-    .card { position:relative; overflow:hidden; display:flex; min-height:100%; flex-direction:column; padding:30px; border:1px solid var(--line); border-radius:22px; background:var(--paper); box-shadow:0 9px 28px rgba(13,36,67,.055); }
-    .card.featured { border-color:rgba(199,155,67,.85); box-shadow:var(--shadow); }
-    .tag { align-self:flex-start; margin:-30px 0 24px -30px; padding:8px 15px 8px 30px; border-radius:0 0 14px 0; background:var(--gold); color:var(--navy); font-size:.7rem; font-weight:900; letter-spacing:.12em; text-transform:uppercase; }
-    .service-icons { display:flex; flex-wrap:wrap; align-items:center; gap:9px; margin:0 0 18px; }
-    .service-icon { display:inline-grid; width:38px; height:38px; place-items:center; border:1px solid rgba(13,36,67,.12); border-radius:11px; box-shadow:0 4px 12px rgba(13,36,67,.08); color:#fff; font-family:Inter,ui-sans-serif,sans-serif; font-size:1.05rem; font-weight:900; line-height:1; }
-    .service-icon.linkedin { background:#0a66c2; }
-    .service-icon.facebook { background:#1877f2; font-family:Arial,sans-serif; font-size:1.45rem; }
-    .service-icon.instagram { background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045); font-size:1.3rem; }
-    .card h3 { margin-bottom:10px; color:var(--navy); font-size:clamp(1.45rem,2.6vw,2rem); }
-    .package-promise { margin:0 0 16px; color:var(--navy-2); font-size:1rem; font-weight:800; }
-    .price { display:flex; align-items:baseline; gap:8px; margin-bottom:18px; color:var(--gold); font-family:Georgia,"Times New Roman",serif; font-size:2.05rem; line-height:1; }
-    .price small { color:var(--muted); font-family:Inter,ui-sans-serif,sans-serif; font-size:.8rem; font-weight:700; }
-    .transformation { margin:0 0 20px; padding:16px 18px; border-left:3px solid var(--gold); border-radius:0 12px 12px 0; background:#f5f0e5; font-size:.93rem; }
-    .transformation strong { color:var(--navy); }
-    .includes-title { margin:0 0 8px; color:var(--navy); font-size:.76rem; font-weight:900; letter-spacing:.1em; text-transform:uppercase; }
-    ul { margin:0 0 22px; padding:0; list-style:none; }
-    li { position:relative; margin:8px 0; padding-left:23px; font-size:.93rem; }
-    li::before { content:"✓"; position:absolute; left:0; color:var(--gold); font-weight:900; }
-    .outcome { margin:auto 0 0; padding-top:17px; border-top:1px solid var(--line); color:var(--muted); font-size:.91rem; }
-    .outcome strong { color:var(--navy); }
-    .comparison-section { padding-top:0; }
-    .comparison { overflow:hidden; border:1px solid var(--line); border-radius:22px; background:var(--paper); box-shadow:var(--shadow); }
-    .comparison-row { display:grid; grid-template-columns:1fr 1fr; border-bottom:1px solid var(--line); }
-    .comparison-row:last-child { border-bottom:0; }
-    .comparison-cell { padding:20px 24px; }
-    .comparison-cell + .comparison-cell { border-left:1px solid var(--line); }
-    .comparison-head { color:#fff; background:var(--navy); font-weight:900; }
-    .comparison-head .comparison-cell:first-child { color:#dce4ef; }
-    .comparison-head .comparison-cell:last-child { color:var(--gold-light); }
-    .channel-section { background:#efe8d9; }
-    .channel-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
-    .mini-card { padding:25px; border:1px solid #d7c9aa; border-radius:18px; background:var(--paper); }
-    .mini-card h3 { margin-bottom:8px; color:var(--navy); font-size:1.45rem; }
-    .mini-card p { margin:0; color:var(--muted); }
-    .mini-card .price { margin:15px 0 0; font-size:1.65rem; }
-    .process-section { color:#fff; background:var(--navy); }
-    .process-section .section-heading h2 { color:#fff; }
-    .process-section .section-heading p { color:#c7d1de; }
-    .process { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
-    .step { padding:24px 22px; border:1px solid rgba(255,255,255,.15); border-radius:18px; background:rgba(255,255,255,.055); }
-    .step-number { display:grid; width:34px; height:34px; margin-bottom:18px; place-items:center; border-radius:50%; background:var(--gold); color:var(--navy); font-size:.8rem; font-weight:900; }
-    .step h3 { margin-bottom:8px; color:var(--gold-light); font-size:1.32rem; }
-    .step p { margin:0; color:#c7d1de; font-size:.9rem; }
-    .cta { padding:80px 0; text-align:center; background:#efe8d9; }
-    .cta-inner { padding:48px 28px; border:1px solid #d7c9aa; border-radius:26px; background:var(--paper); box-shadow:var(--shadow); }
-    .cta h2 { max-width:720px; margin:0 auto 14px; color:var(--navy); font-size:clamp(2rem,4vw,3.2rem); }
-    .cta p { max-width:650px; margin:0 auto 28px; color:var(--muted); }
-    .button-row { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; }
-    .button { display:inline-flex; min-height:48px; align-items:center; justify-content:center; padding:12px 20px; border:1px solid var(--gold); border-radius:999px; background:var(--gold); color:#10223a; font-size:.9rem; font-weight:800; text-decoration:none; transition:transform .2s ease; }
-    .button:hover { transform:translateY(-2px); }
-    .button.secondary { border-color:var(--navy); background:transparent; color:var(--navy); }
-    footer { padding:30px 0; color:#bdc9d7; background:#08182d; text-align:center; font-size:.82rem; }
-    footer strong { color:var(--gold-light); letter-spacing:.08em; }
-    @media (max-width:820px) { section { padding:62px 0; } .packages,.channel-grid { grid-template-columns:1fr; } .process { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-    @media (max-width:520px) { .wrap { width:min(100% - 28px,1120px); } .nav { min-height:60px; } .brand { font-size:.88rem; } .nav-link { font-size:.72rem; } .card { padding:24px 21px; border-radius:18px; } .tag { margin:-24px 0 22px -21px; padding-left:21px; } .process { grid-template-columns:1fr; } .comparison-row { grid-template-columns:1fr; } .comparison-cell + .comparison-cell { border-left:0; border-top:1px solid var(--line); } .comparison-head .comparison-cell + .comparison-cell { border-top-color:rgba(255,255,255,.18); } .button-row { flex-direction:column; } .button { width:100%; } .cta-inner { padding:38px 20px; } }
+    :root{--navy:#0d2443;--navy2:#183858;--gold:#c79b43;--goldlight:#efe1bd;--ivory:#f8f5ee;--paper:#fffdf9;--ink:#1f2f42;--muted:#687486;--line:#ded7c8;--shadow:0 18px 45px rgba(13,36,67,.10)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--ivory);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}a{color:inherit}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}
+    .topbar{position:sticky;top:0;z-index:10;background:rgba(13,36,67,.96);border-bottom:1px solid rgba(255,255,255,.12)}.nav{min-height:66px;display:flex;align-items:center;justify-content:space-between}.brand{color:#fff;font-family:Georgia,"Times New Roman",serif;letter-spacing:.17em;text-decoration:none}.nav-link{color:var(--goldlight);font-size:.8rem;font-weight:800;letter-spacing:.06em;text-decoration:none;text-transform:uppercase}
+    .hero{padding:0;background:#05080d}.hero-image{display:block;width:100%;height:auto;aspect-ratio:1024/424;object-fit:contain}.hero-fallback{display:none;min-height:420px;place-items:center;padding:60px 20px;background:radial-gradient(circle at 70% 20%,#24486d 0,#0d2443 40%,#05080d 100%);color:#fff;text-align:center}.hero-fallback h1{max-width:820px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.4rem,6vw,5rem);font-weight:500;line-height:1.08}
+    .value-strip{padding:42px 0;background:var(--navy);color:#fff;text-align:center}.value-strip h1{max-width:900px;margin:0 auto 14px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,4.5vw,3.7rem);font-weight:500;line-height:1.12}.value-strip p{max-width:760px;margin:auto;color:#d4deea}.gold{color:var(--goldlight)}
+    section{padding:76px 0}.eyebrow{margin:0 0 14px;color:var(--gold);font-size:.76rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}h2,h3{margin-top:0;font-family:Georgia,"Times New Roman",serif;font-weight:500;line-height:1.12}.section-heading{max-width:790px;margin-bottom:34px}.section-heading h2{margin-bottom:12px;color:var(--navy);font-size:clamp(2rem,4vw,3.2rem)}.section-heading p{margin:0;color:var(--muted)}
+    .packages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.card{position:relative;display:flex;flex-direction:column;padding:30px;border:1px solid var(--line);border-radius:22px;background:var(--paper);box-shadow:0 9px 28px rgba(13,36,67,.055)}.card.featured{border-color:rgba(199,155,67,.9);box-shadow:var(--shadow)}.tag{align-self:flex-start;margin:-30px 0 22px -30px;padding:8px 15px 8px 30px;border-radius:0 0 14px 0;background:var(--gold);color:var(--navy);font-size:.7rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+    .service-icons{display:flex;gap:9px;margin:0 0 18px}.service-icon{display:inline-grid;width:38px;height:38px;place-items:center;border-radius:11px;color:#fff;font-weight:900;box-shadow:0 4px 12px rgba(13,36,67,.08)}.linkedin{background:#0a66c2}.facebook{background:#1877f2;font-family:Arial;font-size:1.4rem}.instagram{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);font-size:1.3rem}
+    .card h3{margin-bottom:10px;color:var(--navy);font-size:clamp(1.4rem,2.3vw,1.85rem)}.promise{margin:0 0 16px;color:var(--navy2);font-weight:800}.price{margin:0 0 18px;color:var(--gold);font-family:Georgia,"Times New Roman",serif;font-size:2rem;line-height:1}.price small{color:var(--muted);font-family:Inter,sans-serif;font-size:.78rem;font-weight:700}.regular{margin:-8px 0 18px;color:var(--muted);font-size:.84rem}.regular s{color:#8b8f97}.includes{margin:0 0 8px;color:var(--navy);font-size:.75rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}ul{margin:0 0 22px;padding:0;list-style:none}li{position:relative;margin:8px 0;padding-left:23px;font-size:.92rem}li:before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:900}.outcome{margin:auto 0 0;padding-top:17px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}.outcome strong{color:var(--navy)}
+    .comparison-section{padding-top:0}.comparison{overflow:hidden;border:1px solid var(--line);border-radius:22px;background:var(--paper);box-shadow:var(--shadow)}.comparison-row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}.comparison-row:last-child{border-bottom:0}.comparison-cell{padding:20px 24px}.comparison-cell+.comparison-cell{border-left:1px solid var(--line)}.comparison-head{background:var(--navy);color:#fff;font-weight:900}.comparison-head .comparison-cell:last-child{color:var(--goldlight)}
+    .process-section{background:var(--navy);color:#fff}.process-section h2{color:#fff}.process-section .section-heading p{color:#c7d1de}.process{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step{padding:24px 22px;border:1px solid rgba(255,255,255,.15);border-radius:18px;background:rgba(255,255,255,.055)}.step-number{display:grid;width:34px;height:34px;margin-bottom:18px;place-items:center;border-radius:50%;background:var(--gold);color:var(--navy);font-size:.8rem;font-weight:900}.step h3{margin-bottom:8px;color:var(--goldlight);font-size:1.3rem}.step p{margin:0;color:#c7d1de;font-size:.9rem}
+    .cta{background:#efe8d9;text-align:center}.cta-inner{padding:48px 28px;border:1px solid #d7c9aa;border-radius:26px;background:var(--paper);box-shadow:var(--shadow)}.cta h2{max-width:720px;margin:0 auto 14px;color:var(--navy);font-size:clamp(2rem,4vw,3.2rem)}.cta p{max-width:650px;margin:0 auto 28px;color:var(--muted)}.button-row{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}.button{display:inline-flex;min-height:48px;align-items:center;justify-content:center;padding:12px 20px;border:1px solid var(--gold);border-radius:999px;background:var(--gold);color:#10223a;font-size:.9rem;font-weight:800;text-decoration:none}.button.secondary{border-color:var(--navy);background:transparent;color:var(--navy)}footer{padding:30px 0;background:#08182d;color:#bdc9d7;text-align:center;font-size:.82rem}footer strong{color:var(--goldlight);letter-spacing:.08em}
+    @media(max-width:900px){.packages{grid-template-columns:1fr}.process{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.wrap{width:min(100% - 28px,1120px)}section{padding:60px 0}.card{padding:24px 21px}.tag{margin:-24px 0 22px -21px;padding-left:21px}.process{grid-template-columns:1fr}.comparison-row{grid-template-columns:1fr}.comparison-cell+.comparison-cell{border-left:0;border-top:1px solid var(--line)}.button-row{flex-direction:column}.button{width:100%}}
   </style>
 </head>
 <body>
-  <header class="topbar"><div class="wrap nav"><a class="brand" href="#top" aria-label="PATSPHERE home">PATSPHERE</a><a class="nav-link" href="#packages">View packages</a></div></header>
+  <header class="topbar"><div class="wrap nav"><a class="brand" href="#top">PATSPHERE</a><a class="nav-link" href="#packages">View packages</a></div></header>
   <main id="top">
     <section class="hero"><img id="heroImage" class="hero-image" alt="PATSPHERE Executive Personal Branding"><div id="heroFallback" class="hero-fallback"><h1>Build a professional presence people understand, trust, and remember.</h1></div></section>
     <section class="value-strip"><div class="wrap"><h1>Turn an inactive online profile into a <span class="gold">credible professional presence</span> that creates opportunity.</h1><p>Not simply more posts. A clearer identity, stronger first impression, and a connected presence across the platforms that matter.</p></div></section>
-    <section id="packages"><div class="wrap"><div class="section-heading"><p class="eyebrow">Choose your result</p><h2>Start with clarity. Continue until people remember you.</h2><p>Each package is built around what changes for you—not only what gets produced.</p></div>
+
+    <section id="packages"><div class="wrap">
+      <div class="section-heading"><p class="eyebrow">Services &amp; Investment</p><h2>Choose the level of presence you need now.</h2><p>Start with a focused LinkedIn pilot, build an aligned multi-platform presence, or develop a complete 90-day executive brand system.</p></div>
       <div class="packages">
-        <article class="card"><div class="service-icons" aria-label="LinkedIn, Facebook and Instagram"><span class="service-icon linkedin" title="LinkedIn">in</span><span class="service-icon facebook" title="Facebook">f</span><span class="service-icon instagram" title="Instagram">◎</span></div><h3>Professional Presence</h3><p class="package-promise">1 month — Help people understand and trust you faster.</p><div class="price">10,000 THB <small>/ 1 month</small></div><p class="transformation"><strong>From:</strong> scattered or inactive profiles<br><strong>To:</strong> a clear, professional presence ready to introduce you.</p><p class="includes-title">What changes for you</p><ul><li>People quickly understand who you are and what you are known for</li><li>Your LinkedIn creates a stronger first impression when your name is searched</li><li>Facebook and Instagram communicate the same professional direction</li><li>Your channels begin working as credible introductions—not static profiles</li></ul><p class="outcome"><strong>Visible result:</strong> A complete first-stage professional presence that is clear, credible, and ready to use with clients, partners, and decision-makers.</p></article>
-        <article class="card featured"><span class="tag">Recommended</span><div class="service-icons" aria-label="LinkedIn, Facebook and Instagram"><span class="service-icon linkedin" title="LinkedIn">in</span><span class="service-icon facebook" title="Facebook">f</span><span class="service-icon instagram" title="Instagram">◎</span></div><h3>Personal Brand Transformation</h3><p class="package-promise">3 months — Build recognition, credibility, and business relevance.</p><div class="price">28,000 THB <small>/ 3 months</small></div><p class="transformation"><strong>From:</strong> having online profiles<br><strong>To:</strong> having a personal brand people recognise and connect with opportunity.</p><p class="includes-title">What changes for you</p><ul><li>Your positioning becomes consistent and memorable across platforms</li><li>People begin to associate your name with a clear area of expertise</li><li>Your content demonstrates perspective, experience, and professional value</li><li>Your digital presence starts supporting conversations, referrals, and business opportunities</li><li>You finish with a repeatable communication direction for the next stage</li></ul><p class="outcome"><strong>Visible result:</strong> A connected personal brand system that moves from first impression to recognition—and from recognition toward opportunity.</p></article>
-      </div></div></section>
-    <section class="comparison-section"><div class="wrap"><div class="section-heading"><p class="eyebrow">The decision</p><h2>One month establishes you. Three months builds momentum.</h2></div><div class="comparison" role="table" aria-label="One-month and three-month package comparison"><div class="comparison-row comparison-head" role="row"><div class="comparison-cell" role="columnheader">1 Month</div><div class="comparison-cell" role="columnheader">3 Months</div></div><div class="comparison-row" role="row"><div class="comparison-cell" role="cell">Make your positioning clear</div><div class="comparison-cell" role="cell">Make your positioning memorable</div></div><div class="comparison-row" role="row"><div class="comparison-cell" role="cell">Build a credible first impression</div><div class="comparison-cell" role="cell">Build sustained professional trust</div></div><div class="comparison-row" role="row"><div class="comparison-cell" role="cell">Activate your key channels</div><div class="comparison-cell" role="cell">Connect every channel into one brand direction</div></div><div class="comparison-row" role="row"><div class="comparison-cell" role="cell">Best for testing the working relationship</div><div class="comparison-cell" role="cell">Best for executives building a serious long-term presence</div></div></div></div></section>
-    <section class="channel-section"><div class="wrap"><div class="section-heading"><p class="eyebrow">Focused options</p><h2>Start with one channel when that is all you need.</h2><p>Focused services are available separately. Facebook and Instagram share one aligned content direction.</p></div><div class="channel-grid"><article class="mini-card"><div class="service-icons"><span class="service-icon linkedin" title="LinkedIn">in</span></div><h3>LinkedIn Professional Presence</h3><p>Profile positioning, professional narrative, and four strategic posts designed to strengthen how you are understood.</p><div class="price">5,000 THB <small>/ month</small></div></article><article class="mini-card"><div class="service-icons"><span class="service-icon facebook" title="Facebook">f</span><span class="service-icon instagram" title="Instagram">◎</span></div><h3>Facebook + Instagram Presence</h3><p>One aligned content direction adapted across both platforms to create a consistent and active presence.</p><div class="price">5,000 THB <small>/ month</small></div></article></div></div></section>
-    <section class="process-section"><div class="wrap"><div class="section-heading"><p class="eyebrow">How I Work</p><h2>A clear process from identity to opportunity.</h2><p>Every engagement begins with your role, goals, and real professional context.</p></div><div class="process"><article class="step"><span class="step-number">01</span><h3>Discover</h3><p>Understand your role, goals, audience, and current digital presence.</p></article><article class="step"><span class="step-number">02</span><h3>Position</h3><p>Clarify what people should understand and remember about you.</p></article><article class="step"><span class="step-number">03</span><h3>Build</h3><p>Align your profiles and create content that demonstrates professional value.</p></article><article class="step"><span class="step-number">04</span><h3>Connect</h3><p>Turn consistent visibility into stronger trust and relevant opportunities.</p></article></div></div></section>
-    <section class="cta"><div class="wrap"><div class="cta-inner"><p class="eyebrow">Start with clarity</p><h2>Your profile already exists. The question is what it communicates when people find it.</h2><p>Choose one month to establish a credible starting point, or three months to build a personal brand people can recognise and remember.</p><div class="button-row"><a class="button" href="https://line.me/R/ti/p/%40patsphere" target="_blank" rel="noopener">LINE @patsphere</a><a class="button secondary" href="mailto:phatsha.thana@gmail.com">phatsha.thana@gmail.com</a></div></div></div></section>
+        <article class="card">
+          <div class="service-icons"><span class="service-icon linkedin">in</span></div>
+          <h3>LinkedIn Pilot</h3>
+          <p class="promise">A focused starting point for executives who want to test the process.</p>
+          <div class="price">14,900 THB <small>/ 1 month</small></div>
+          <p class="includes">Includes</p>
+          <ul><li>LinkedIn profile positioning</li><li>Headline and About refinement</li><li>Profile and banner direction</li><li>4 strategic posts</li><li>Monthly Snapshot — 1-page summary</li></ul>
+          <p class="outcome"><strong>Outcome:</strong> A clearer, more credible LinkedIn presence and a practical first month to evaluate the working relationship.</p>
+        </article>
+
+        <article class="card">
+          <div class="service-icons"><span class="service-icon linkedin">in</span><span class="service-icon facebook">f</span><span class="service-icon instagram">◎</span></div>
+          <h3>Executive Digital Presence</h3>
+          <p class="promise">An aligned professional presence across LinkedIn, Facebook, and Instagram.</p>
+          <div class="price">29,000 THB <small>/ 1 month</small></div>
+          <p class="includes">Includes</p>
+          <ul><li>Executive positioning and professional narrative</li><li>LinkedIn profile optimisation</li><li>LinkedIn, Facebook, and Instagram content direction</li><li>Channel setup and visual alignment</li><li>Monthly Snapshot — 1-page summary</li></ul>
+          <p class="outcome"><strong>Outcome:</strong> A complete first-stage digital presence that communicates one consistent professional identity across key platforms.</p>
+        </article>
+
+        <article class="card featured">
+          <span class="tag">90-Day Program</span>
+          <div class="service-icons"><span class="service-icon linkedin">in</span><span class="service-icon facebook">f</span><span class="service-icon instagram">◎</span></div>
+          <h3>90-Day Executive Brand Program</h3>
+          <p class="promise">Build recognition, credibility, and a repeatable personal brand system.</p>
+          <div class="price">60,000 THB <small>/ 3 months</small></div>
+          <p class="regular">Launch investment · Future regular price <s>75,000 THB</s></p>
+          <p class="includes">Includes</p>
+          <ul><li>Executive positioning strategy</li><li>LinkedIn, Facebook, and Instagram brand alignment</li><li>3-month strategic content development</li><li>Monthly planning and performance review</li><li>Final Executive Brand Summary and reusable content direction</li></ul>
+          <p class="outcome"><strong>Outcome:</strong> A connected executive brand system that moves from first impression to recognition—and from recognition toward opportunity.</p>
+        </article>
+      </div>
+    </div></section>
+
+    <section class="comparison-section"><div class="wrap"><div class="section-heading"><p class="eyebrow">The decision</p><h2>One month establishes the foundation. Three months builds recognition.</h2></div><div class="comparison"><div class="comparison-row comparison-head"><div class="comparison-cell">1-Month Options</div><div class="comparison-cell">90-Day Program</div></div><div class="comparison-row"><div class="comparison-cell">Clarify positioning and improve first impression</div><div class="comparison-cell">Build a memorable and repeatable brand direction</div></div><div class="comparison-row"><div class="comparison-cell">Activate selected channels</div><div class="comparison-cell">Connect all channels into one executive brand system</div></div><div class="comparison-row"><div class="comparison-cell">Monthly Snapshot — concise 1-page summary</div><div class="comparison-cell">Final Executive Brand Summary and next-stage direction</div></div></div></div></section>
+
+    <section class="process-section"><div class="wrap"><div class="section-heading"><p class="eyebrow">How I Work</p><h2>A clear process from identity to opportunity.</h2><p>Every engagement begins with your role, goals, and real professional context.</p></div><div class="process"><article class="step"><span class="step-number">01</span><h3>Discover</h3><p>Understand your role, goals, audience, and current digital presence.</p></article><article class="step"><span class="step-number">02</span><h3>Position</h3><p>Clarify what people should understand and remember about you.</p></article><article class="step"><span class="step-number">03</span><h3>Build</h3><p>Align profiles and create content that demonstrates professional value.</p></article><article class="step"><span class="step-number">04</span><h3>Connect</h3><p>Turn consistent visibility into stronger trust and relevant opportunities.</p></article></div></div></section>
+
+    <section class="cta"><div class="wrap"><div class="cta-inner"><p class="eyebrow">Start with clarity</p><h2>Your profile already exists. The question is what it communicates when people find it.</h2><p>Choose a focused one-month starting point or build a complete 90-day executive brand system.</p><div class="button-row"><a class="button" href="https://line.me/R/ti/p/%40patsphere" target="_blank" rel="noopener">LINE @patsphere</a><a class="button secondary" href="mailto:phatsha.thana@gmail.com">phatsha.thana@gmail.com</a></div></div></div></section>
   </main>
   <footer><div class="wrap"><strong>PATSPHERE ADVISORY</strong><br>Healthcare · Wellness · AI · Human</div></footer>
-  <script>(function(){var image=document.getElementById('heroImage');var fallback=document.getElementById('heroFallback');var source='https://raw.githubusercontent.com/PATSPHERE/PATSPHERE.GITHUB.IO/ecd8c471267359b5e55cf07d2f58361a0481d743/index.html';function showFallback(){image.style.display='none';fallback.style.display='grid';}fetch(source).then(function(response){if(!response.ok)throw new Error('Hero source unavailable');return response.text();}).then(function(page){var match=page.match(/<img class="hero-image" src="([^"]+)"/);if(!match||!match[1])throw new Error('Hero image not found');image.src=match[1];}).catch(showFallback);image.addEventListener('error',showFallback);}());</script>
+  <script>(function(){var image=document.getElementById('heroImage'),fallback=document.getElementById('heroFallback'),source='https://raw.githubusercontent.com/PATSPHERE/PATSPHERE.GITHUB.IO/ecd8c471267359b5e55cf07d2f58361a0481d743/index.html';function fail(){image.style.display='none';fallback.style.display='grid'}fetch(source).then(function(r){if(!r.ok)throw new Error();return r.text()}).then(function(t){var m=t.match(/<img class="hero-image" src="([^"]+)"/);if(!m)throw new Error();image.src=m[1]}).catch(fail);image.addEventListener('error',fail)}());</script>
 </body>
 </html>
