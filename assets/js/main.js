@@ -27,5 +27,11 @@
   const i18n=document.createElement('script');
   i18n.src='assets/js/i18n.js';
   i18n.defer=true;
+  i18n.addEventListener('load',()=>{
+    const selectedPages=document.createElement('script');
+    selectedPages.src='assets/js/i18n-selected-pages.js';
+    selectedPages.defer=true;
+    document.head.appendChild(selectedPages);
+  });
   document.head.appendChild(i18n);
 })();
