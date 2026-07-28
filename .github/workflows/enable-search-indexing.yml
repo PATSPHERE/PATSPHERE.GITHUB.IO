@@ -1,0 +1,29 @@
+name: Enable search indexing
+
+on:
+  push:
+    paths:
+      - '.github/workflows/enable-search-indexing.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  enable-indexing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove noindex directives
+        run: |
+          find . -type f -name '*.html' -print0 | xargs -0 sed -i 's/<meta name="robots" content="noindex,nofollow,noarchive">/<meta name="robots" content="index,follow">/g'
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No indexing directives needed changing."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add '*.html'
+          git commit -m "Enable search engine indexing"
+          git push
