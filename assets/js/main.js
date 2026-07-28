@@ -11,23 +11,17 @@
     @media (max-width:760px){
       .lock-cta-grid{
         min-height:auto!important;
-        grid-template-columns:72px minmax(0,1fr)!important;
+        grid-template-columns:1fr!important;
         grid-template-rows:auto auto auto auto!important;
         align-items:start!important;
-        gap:14px 18px!important;
+        gap:14px!important;
         padding-block:30px!important;
       }
       .lock-cta-mark{
-        grid-column:1!important;
-        grid-row:1!important;
-        width:64px!important;
-        height:64px!important;
-        margin-top:2px!important;
-        border-right:1px solid var(--gold)!important;
-        font-size:50px!important;
+        display:none!important;
       }
       .lock-cta-grid>div:nth-child(2){
-        grid-column:2!important;
+        grid-column:1!important;
         grid-row:1!important;
         min-width:0!important;
       }
@@ -43,7 +37,7 @@
       }
       .lock-cta p br{display:block!important}
       .lock-cta .btn{
-        grid-column:1/-1!important;
+        grid-column:1!important;
         width:100%!important;
         min-height:54px!important;
         padding:12px 16px!important;
@@ -55,7 +49,7 @@
         grid-row:3!important;
       }
       .lock-email{
-        grid-column:1/-1!important;
+        grid-column:1!important;
         grid-row:4!important;
         justify-self:start!important;
         font-size:.94rem!important;
@@ -98,15 +92,6 @@
       }
     }
     @media (max-width:390px){
-      .lock-cta-grid{
-        grid-template-columns:60px minmax(0,1fr)!important;
-        gap:13px 14px!important;
-      }
-      .lock-cta-mark{
-        width:54px!important;
-        height:58px!important;
-        font-size:45px!important;
-      }
       .lock-cta h2{font-size:2rem!important}
       .lock-footer-grid{gap:20px!important}
     }
