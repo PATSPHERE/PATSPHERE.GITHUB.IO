@@ -5,11 +5,70 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="theme-color" content="#071d35">
-<meta name="description" content="PATSPHERE Advisory — Strategy, executive advisory, AI transformation, healthcare and wellness.">
-<title>Executive Positioning & Personal Branding | PATSPHERE Advisory</title>
+<meta name="description" content="Executive positioning and personal branding experience from PATSPHERE Advisory.">
+<title>Executive Positioning &amp; Personal Branding | PATSPHERE Advisory</title>
 <link rel="stylesheet" href="assets/css/styles.css">
+<style>
+  .executive-page{--executive-gold:#c99446;--executive-navy:#071d35}
+  .executive-page .executive-hero{padding:72px 0 78px;background:radial-gradient(circle at 18% 38%,#0e3257 0,#071d35 46%,#041426 100%);color:#fff}
+  .executive-page .executive-hero-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:58px;align-items:center}
+  .executive-page .executive-copy h1{max-width:520px;font-size:clamp(3rem,5.4vw,5.3rem);line-height:.98;margin:.28em 0 .2em}
+  .executive-page .executive-subtitle{font-family:var(--serif);font-size:1.45rem;font-style:italic;color:#d4a45d;margin-bottom:26px}
+  .executive-page .executive-copy>p:not(.eyebrow):not(.executive-subtitle){max-width:460px;color:#e8edf2;font-size:1.02rem}
+  .executive-page .executive-rule{width:52px;height:2px;background:var(--executive-gold);margin:44px 0 30px}
+  .executive-page .executive-quote{display:flex;gap:16px;align-items:center;font-family:var(--serif);font-size:1.34rem;line-height:1.25}
+  .executive-page .executive-quote-icon{display:grid;place-items:center;width:54px;height:54px;flex:0 0 54px;border:1px solid var(--executive-gold);border-radius:50%;font-family:var(--sans);font-size:1.45rem;color:#fff}
+  .executive-page .executive-platforms{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px 18px;align-items:end}
+  .executive-page .platform-shot{margin:0}
+  .executive-page .platform-shot figcaption{margin:0 0 9px;text-align:center;color:#d5a351;font-size:.69rem;font-weight:800;letter-spacing:.14em}
+  .executive-page .platform-shot img{display:block;width:100%;height:auto;border:1px solid rgba(201,148,70,.7);border-radius:10px;background:#fff}
+  .executive-page .executive-principles{padding:68px 0 54px;background:#fbf9f5}
+  .executive-page .executive-principle-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+  .executive-page .executive-principle{padding:0 52px;text-align:center}
+  .executive-page .executive-principle+article{border-left:1px solid #dfd1bb}
+  .executive-page .principle-icon{display:grid;place-items:center;width:54px;height:54px;margin:0 auto 22px;border:1px solid var(--executive-gold);border-radius:50%;color:var(--executive-navy);font-size:1.35rem}
+  .executive-page .executive-principle h2{font-size:1.65rem;margin-bottom:18px}
+  .executive-page .executive-principle h2:after{content:"";display:block;width:40px;height:2px;margin:17px auto 0;background:#d1a15a}
+  .executive-page .executive-principle p{color:#4d5865;font-size:.94rem}
+  .executive-page .executive-ecosystem{padding:26px 0 54px;background:#fff}
+  .executive-page .ecosystem-title{text-align:center;color:var(--executive-navy);font-size:.74rem;font-weight:800;letter-spacing:.17em;margin:0 0 24px}
+  .executive-page .ecosystem-items{display:grid;grid-template-columns:repeat(4,1fr)}
+  .executive-page .ecosystem-item{padding:0 35px;text-align:center}
+  .executive-page .ecosystem-item+div{border-left:1px solid #dfd1bb}
+  .executive-page .ecosystem-mark{display:grid;place-items:center;height:45px;margin-bottom:10px;font-size:2.2rem;font-weight:800;color:#0a66c2}
+  .executive-page .ecosystem-item:nth-child(2) .ecosystem-mark{color:var(--executive-navy)}
+  .executive-page .ecosystem-item:nth-child(3) .ecosystem-mark{color:#c13584}
+  .executive-page .ecosystem-item:nth-child(4) .ecosystem-mark{color:#1877f2}
+  .executive-page .ecosystem-item h3{font-family:var(--sans);font-size:.75rem;letter-spacing:.16em;margin-bottom:9px}
+  .executive-page .ecosystem-item p{color:#52606d;font-size:.88rem;line-height:1.45}
+  .executive-page .executive-cta{position:relative;overflow:hidden;padding:52px 0;background:radial-gradient(circle at 24% 20%,#0d355b,#071d35 55%,#041426);color:#fff}
+  .executive-page .executive-cta:before,.executive-page .executive-cta:after{content:"";position:absolute;width:210px;height:210px;border:1px solid rgba(201,148,70,.7);border-radius:45%;transform:rotate(30deg)}
+  .executive-page .executive-cta:before{left:-150px;bottom:-120px}
+  .executive-page .executive-cta:after{right:-160px;top:-115px}
+  .executive-page .executive-cta-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .55fr 1fr;gap:50px;align-items:center}
+  .executive-page .executive-cta h2{font-size:2.25rem;line-height:1.1;margin-bottom:20px}
+  .executive-page .executive-cta h2 em{display:block;color:#d3a054;font-weight:400}
+  .executive-page .executive-cta p{color:#e5eaf0}
+  @media(max-width:960px){
+    .executive-page .executive-hero-grid{grid-template-columns:1fr}
+    .executive-page .executive-copy h1{max-width:760px}
+    .executive-page .executive-platforms{max-width:720px}
+    .executive-page .executive-principle{padding:0 24px}
+    .executive-page .ecosystem-item{padding:0 18px}
+    .executive-page .executive-cta-grid{grid-template-columns:1fr auto}.executive-page .executive-cta-note{grid-column:1/-1}
+  }
+  @media(max-width:680px){
+    .executive-page .executive-hero{padding:58px 0 64px}
+    .executive-page .executive-platforms{grid-template-columns:1fr}
+    .executive-page .executive-principle-grid,.executive-page .ecosystem-items{grid-template-columns:1fr}
+    .executive-page .executive-principle{padding:34px 10px}
+    .executive-page .executive-principle+article,.executive-page .ecosystem-item+div{border-left:0;border-top:1px solid #dfd1bb}
+    .executive-page .ecosystem-item{padding:28px 10px}
+    .executive-page .executive-cta-grid{grid-template-columns:1fr;gap:28px}
+  }
+</style>
 </head>
-<body>
+<body class="executive-page">
 
 <header class="site-header">
   <div class="container header-inner">
@@ -18,42 +77,111 @@
       <span class="brand-name">PATSPHERE<small>ADVISORY</small></span>
     </a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    <nav class="main-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="projects.html" class="active">Projects</a><a href="reflections.html">Reflections</a><a href="contact.html">Contact</a><a class="nav-line" href="https://line.me/R/ti/p/%40237sdgzu" target="_blank" rel="noopener">LINE OA</a></nav>
+    <nav class="main-nav">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+      <a href="projects.html" class="active">Projects</a><a href="reflections.html">Insights</a><a href="contact.html">Contact</a>
+      <a class="nav-line" href="contact.html">Let's Connect</a>
+    </nav>
   </div>
 </header>
+
 <main>
-<section class="project-detail-hero navy">
-  <div class="container project-detail-grid">
-    <div><p class="eyebrow gold">PROJECT 02</p><h1>Executive Positioning &amp; Personal Branding</h1><p class="lead">Positioning leaders for clearer market authority.</p><p>Helping leaders turn experience into a clear position, credible identity, and communication that strengthens market authority.</p></div>
-    <div class="ecosystem-grid"><div class="sprite site-sprite s10"></div><div class="sprite site-sprite s11"></div><div class="sprite site-sprite s12"></div><div class="sprite site-sprite s13"></div></div>
-  </div>
-</section>
-<section class="section"><div class="container">
-  <div class="project-story"><div><p class="eyebrow">WHAT THIS WORK REFLECTS</p><h2>Experience creates value. Clarity makes it visible.</h2></div><p>Working with executives and professionals has reinforced one central idea: experience alone is not enough if its value cannot be communicated in a way others understand. This work brings positioning, leadership narrative, professional identity, and platform presence into one connected system.</p></div>
-  <div class="focus-tags"><span>Positioning</span><span>Leadership Narrative</span><span>Professional Identity</span><span>LinkedIn</span><span>Website</span><span>Facebook</span><span>Instagram</span></div>
-</div></section>
-<section class="section soft"><div class="container"><div class="card-grid three">
-  <article class="principle-card"><span>01</span><h3>What it reflects</h3><p>A focus on translating leadership experience into clear positioning and authentic narratives.</p></article>
-  <article class="principle-card"><span>02</span><h3>What it shaped</h3><p>Distinct executive identities that communicate value, build trust, and create professional equity.</p></article>
-  <article class="principle-card"><span>03</span><h3>Across the ecosystem</h3><p>One story across multiple touchpoints—creating a stronger and more consistent presence.</p></article>
-</div></div></section>
-<section class="cta-band"><div class="container cta-inner"><div><p class="eyebrow">EXECUTIVE PRESENCE</p><h2>Lead with clarity. Be remembered for impact.</h2></div><a class="btn light" href="personal-branding.html">Explore the service</a></div></section>
+  <section class="executive-hero">
+    <div class="container executive-hero-grid">
+      <div class="executive-copy">
+        <p class="eyebrow gold">PROJECT 02</p>
+        <h1>Executive Positioning &amp; Personal Branding</h1>
+        <p class="executive-subtitle">Positioning leaders for clearer market authority.</p>
+        <p>Experience alone is not enough — unless its value is communicated with clarity.</p>
+        <p>This work helps turn leadership experience into clear positioning, a stronger identity, and a credible presence in the market.</p>
+        <div class="executive-rule"></div>
+        <div class="executive-quote"><span class="executive-quote-icon">◎</span><span>Clarity builds credibility.<br>Credibility builds impact.</span></div>
+      </div>
+      <div class="executive-platforms">
+        <figure class="platform-shot">
+          <figcaption>LINKEDIN PROFILE</figcaption>
+          <img class="image-loading" data-b64="assets/project-locks/executive-linkedin.b64" data-mime="image/png" alt="Executive LinkedIn profile concept">
+        </figure>
+        <figure class="platform-shot">
+          <figcaption>EXECUTIVE WEBSITE</figcaption>
+          <img class="image-loading" data-b64="assets/project-locks/executive-website.b64" data-mime="image/png" alt="Executive website concept">
+        </figure>
+        <figure class="platform-shot">
+          <figcaption>INSTAGRAM PROFILE</figcaption>
+          <img class="image-loading" data-b64="assets/project-locks/executive-instagram.b64" data-mime="image/png" alt="Executive Instagram profile concept">
+        </figure>
+        <figure class="platform-shot">
+          <figcaption>FACEBOOK PAGE</figcaption>
+          <img class="image-loading" data-b64="assets/project-locks/executive-facebook.b64" data-mime="image/png" alt="Executive Facebook page concept">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="executive-principles">
+    <div class="container executive-principle-grid">
+      <article class="executive-principle">
+        <span class="principle-icon">○</span>
+        <h2>What this work reflects</h2>
+        <p>A focus on translating leadership experience into clear positioning and authentic narratives.</p>
+        <p>It reflects a belief that influence begins with clarity.</p>
+      </article>
+      <article class="executive-principle">
+        <span class="principle-icon">◇</span>
+        <h2>What it shaped</h2>
+        <p>Distinct executive identities that communicate value, build trust, and create lasting professional equity.</p>
+        <p>From personal story to market authority.</p>
+      </article>
+      <article class="executive-principle">
+        <span class="principle-icon">◎</span>
+        <h2>Across the ecosystem</h2>
+        <p>A consistent presence across key platforms that reinforces credibility and reach.</p>
+        <p>One story. Many touchpoints.<br>Stronger impact.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="executive-ecosystem">
+    <div class="container">
+      <p class="ecosystem-title">THE EXECUTIVE PRESENCE ECOSYSTEM</p>
+      <div class="ecosystem-items">
+        <div class="ecosystem-item"><span class="ecosystem-mark">in</span><h3>LINKEDIN</h3><p>Professional positioning and network credibility</p></div>
+        <div class="ecosystem-item"><span class="ecosystem-mark">◎</span><h3>WEBSITE</h3><p>Thought leadership and executive storytelling</p></div>
+        <div class="ecosystem-item"><span class="ecosystem-mark">◉</span><h3>INSTAGRAM</h3><p>Human side of leadership and daily perspectives</p></div>
+        <div class="ecosystem-item"><span class="ecosystem-mark">f</span><h3>FACEBOOK</h3><p>Community engagement and broader reach</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="executive-cta">
+    <div class="container executive-cta-grid">
+      <div>
+        <h2>Lead with clarity.<em>Be remembered for impact.</em></h2>
+        <p>Let's build your positioning and presence with purpose and precision.</p>
+      </div>
+      <a class="btn light" href="contact.html">Let's Connect</a>
+      <p class="executive-cta-note">We partner with leaders to define their narrative, amplify their influence, and elevate their impact.</p>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
   <div class="container footer-grid">
-    <div>
-      <a class="brand footer-brand" href="index.html">
-        <span class="brand-mark"><span>P</span><b>A</b></span>
-        <span class="brand-name">PATSPHERE<small>ADVISORY</small></span>
-      </a>
-      <p>Strategy. Identity. Impact.</p>
-    </div>
+    <div><a class="brand footer-brand" href="index.html"><span class="brand-mark"><span>P</span><b>A</b></span><span class="brand-name">PATSPHERE<small>ADVISORY</small></span></a><p>Strategy. Identity. Impact.</p></div>
     <div><h4>Focus</h4><p>Business Strategy<br>Executive Advisory<br>AI &amp; Business Transformation<br>Healthcare &amp; Wellness</p></div>
     <div><h4>Contact</h4><p><a href="mailto:phatsha.thana@gmail.com">phatsha.thana@gmail.com</a><br><a href="https://line.me/R/ti/p/%40237sdgzu" target="_blank" rel="noopener">LINE OA</a><br><a href="https://www.linkedin.com/in/phatsha-thana-831160328/" target="_blank" rel="noopener">LinkedIn</a></p></div>
   </div>
   <div class="container copyright">© <span data-year></span> PATSPHERE Advisory. All rights reserved.</div>
 </footer>
 <script src="assets/js/main.js"></script>
+<script>
+  Promise.all([...document.querySelectorAll("img[data-b64]")].map(async (img) => {
+    const response = await fetch(img.dataset.b64, {cache:"no-store"});
+    if (!response.ok) throw new Error("Image could not be loaded");
+    const encoded = (await response.text()).replace(/\s/g,"");
+    img.src = "data:" + img.dataset.mime + ";base64," + encoded;
+    img.addEventListener("load", () => img.classList.add("loaded"), {once:true});
+  })).catch(() => document.querySelectorAll(".image-loading").forEach(img => img.classList.add("loaded")));
+</script>
 </body>
 </html>
