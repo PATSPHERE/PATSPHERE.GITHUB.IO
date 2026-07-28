@@ -41,7 +41,7 @@
         line-height:1.48!important;
         margin:0!important;
       }
-      .lock-cta p br{display:none!important}
+      .lock-cta p br{display:block!important}
       .lock-cta .btn{
         grid-column:1/-1!important;
         width:100%!important;
