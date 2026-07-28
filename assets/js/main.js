@@ -1,4 +1,16 @@
 (() => {
+  const logoStyles=document.createElement('link');
+  logoStyles.rel='stylesheet';
+  logoStyles.href='assets/css/logo-system.css';
+  logoStyles.dataset.patsphereLogoSystem='option-c2';
+  document.head.appendChild(logoStyles);
+  if(!document.querySelector('link[rel~="icon"]')){
+    const favicon=document.createElement('link');
+    favicon.rel='icon';
+    favicon.type='image/svg+xml';
+    favicon.href='assets/images/patsphere-favicon.svg';
+    document.head.appendChild(favicon);
+  }
   document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
   const toggle=document.querySelector('.nav-toggle'),nav=document.querySelector('.main-nav');
   if(toggle&&nav){toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');}));}
