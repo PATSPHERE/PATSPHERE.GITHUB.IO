@@ -3,7 +3,7 @@
   const toggle=document.querySelector('.nav-toggle'),nav=document.querySelector('.main-nav');
   if(toggle&&nav){toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');}));}
   const posts=window.PATSPHERE_REFLECTIONS||[];
-  const reflectionImageExt=['png','jpeg','png','jpeg','jpeg','jpeg','jpeg','jpeg','png','png','jpeg','jpeg','png','png','png','png','png','png','jpeg','jpeg','jpeg','png','png','jpeg','jpeg'];
+  const reflectionImageExt=['webp','jpeg','png','jpeg','jpeg','jpeg','jpeg','jpeg','png','png','jpeg','jpeg','png','png','png','png','png','png','jpeg','jpeg','jpeg','png','png','jpeg','jpeg'];
   const reflectionImage=index=>`assets/images/reflections/reflection-${String(Number(index)+1).padStart(2,'0')}.${reflectionImageExt[index]}`;
   const grid=document.getElementById('reflection-grid');
   if(grid&&posts.length){posts.forEach((post,index)=>{const card=document.createElement('article');card.className='reflection-card';card.dataset.cat=post.cat;card.innerHTML=`<div class="reflection-media"><img class="reflection-thumb" src="${reflectionImage(post.sprite)}" alt="" loading="lazy" decoding="async"></div><div class="reflection-card-body"><p class="eyebrow"></p><h3></h3><p class="excerpt"></p><button class="text-button" data-reflection="${index}">Read reflection →</button></div>`;card.querySelector('.eyebrow').textContent=post.cat;card.querySelector('h3').textContent=post.title;card.querySelector('.excerpt').textContent=post.excerpt;grid.appendChild(card);});}
