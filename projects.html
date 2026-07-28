@@ -66,7 +66,7 @@
         <div class="locked-project-copy"><span class="locked-project-no">01</span><h2>Healthcare &amp; Wellness Business Development &amp; Digital Transformation</h2><p>Turning healthcare and wellness ideas into practical, accessible, and sustainable services.</p><strong class="locked-project-link">View details →</strong></div>
       </a>
       <a class="locked-project-card" href="project-executive-positioning.html">
-        <div class="locked-project-image"><img class="image-loading" data-b64="assets/project-locks/02-executive.b64" alt="Executive positioning and personal branding"></div>
+        <div class="locked-project-image"><img class="image-loading" data-b64="assets/project-locks/02-executive.b64" data-mime="image/png" alt="Executive positioning and personal branding"></div>
         <div class="locked-project-copy"><span class="locked-project-no">02</span><h2>Executive Positioning &amp; Personal Branding</h2><p>Positioning leaders for clearer market authority.</p><strong class="locked-project-link">View details →</strong></div>
       </a>
       <a class="locked-project-card" href="project-ai-adoption.html">
@@ -97,7 +97,7 @@
     const response = await fetch(img.dataset.b64, {cache:"no-store"});
     if (!response.ok) throw new Error("Image could not be loaded");
     const encoded = (await response.text()).replace(/\s/g,"");
-    img.src = "data:image/jpeg;base64," + encoded;
+    img.src = "data:" + (img.dataset.mime || "image/jpeg") + ";base64," + encoded;
     img.addEventListener("load", () => img.classList.add("loaded"), {once:true});
   })).catch(() => document.querySelectorAll(".image-loading").forEach(img => img.classList.add("loaded")));
 </script>
