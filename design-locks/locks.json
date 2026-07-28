@@ -1,0 +1,9 @@
+{
+  "version": "PATSPHERE Home V1",
+  "defaultState": "LOCKED",
+  "unlockPhrase": "Unlock",
+  "pages": {
+    "index.html": "home-v1-master.svg"
+  },
+  "rule": "A direct change request overrides only the named element. All other visual decisions remain locked."
+}
