@@ -36,7 +36,7 @@
   <div class="photo-story-grid">
     <article><img class="project-photo portrait" src="assets/project-images/healthcare-event.jpg" alt="Healthcare exhibition and service context"><h3>Healthcare Innovation &amp; Service Context</h3><p>Grounding strategy in the realities of healthcare delivery, stakeholder expectations, and human experience.</p></article>
     <article><img class="project-photo" src="assets/project-images/healthcare-team.png" alt="Healthcare team working together around service documents"><h3>Teams, Process &amp; Implementation</h3><p>Listening, aligning, and helping people move forward together.</p></article>
-    <article><img class="project-photo" src="assets/project-images/healthcare-go-live.png" alt="Healthcare digital transformation go-live knowledge sharing"><h3>Digital Partnerships</h3><p>Connecting collaboration, service design, and digital capability to support practical growth.</p></article>
+    <article><img class="project-photo portrait image-loading" data-b64="assets/project-locks/healthcare-digital-partnerships.b64" data-mime="image/jpeg" alt="Healthcare digital partnership team"><h3>Digital Partnerships</h3><p>Connecting collaboration, service design, and digital capability to support practical growth.</p></article>
     <article><img class="project-photo portrait" src="assets/project-images/healthcare-patient-experience.jpg" alt="Paolo Family Smile patient experience initiative"><h3>Human-Centred Service</h3><p>Ensuring that systems and services remain understandable, accessible, and meaningful to people.</p></article>
   </div>
 </div></section>
@@ -57,5 +57,14 @@
   <div class="container copyright">© <span data-year></span> PATSPHERE Advisory. All rights reserved.</div>
 </footer>
 <script src="assets/js/main.js"></script>
+<script>
+  Promise.all([...document.querySelectorAll("img[data-b64]")].map(async (img) => {
+    const response = await fetch(img.dataset.b64, {cache:"no-store"});
+    if (!response.ok) throw new Error("Image could not be loaded");
+    const encoded = (await response.text()).replace(/\s/g,"");
+    img.src = "data:" + img.dataset.mime + ";base64," + encoded;
+    img.addEventListener("load", () => img.classList.add("loaded"), {once:true});
+  })).catch(() => document.querySelectorAll(".image-loading").forEach(img => img.classList.add("loaded")));
+</script>
 </body>
 </html>
