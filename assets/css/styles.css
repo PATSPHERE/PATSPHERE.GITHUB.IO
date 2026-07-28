@@ -294,7 +294,7 @@ blockquote{font:italic clamp(2rem,4vw,4.5rem) var(--serif);line-height:1.25;marg
 .reflection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .reflection-card{border:1px solid var(--stone);background:white;overflow:hidden;display:flex;flex-direction:column}
 .reflection-card[hidden]{display:none}
-.reflection-media{aspect-ratio:1/1;display:grid;place-items:center;overflow:hidden;background:var(--ivory)}.reflection-thumb{display:block;width:100%;height:100%;object-fit:contain}
+.reflection-media{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--ivory);min-width:0}.reflection-thumb{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
 .reflection-card-body{padding:22px;display:flex;flex:1;flex-direction:column}.reflection-card-body h3{font-size:1.28rem}.reflection-card-body>p:not(.eyebrow){color:var(--muted)}.reflection-card-body .text-button{margin-top:auto;align-self:flex-start}
 .ref-sprite{background-image:url("../images/reflections-sprite.jpg");background-size:500% 500%;background-repeat:no-repeat;background-color:#ddd}
 .linkedin-strip{padding:34px 0;background:var(--ivory);border-top:1px solid var(--stone)}
