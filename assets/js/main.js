@@ -48,22 +48,6 @@
   const modal=document.getElementById('reflection-modal');
   if(modal&&posts.length){const title=document.getElementById('modal-title'),cat=document.getElementById('modal-cat'),body=document.getElementById('modal-body'),close=modal.querySelector('.modal-close');const openModal=index=>{const post=posts[Number(index)];if(!post)return;title.textContent=post.title;cat.textContent=post.cat;body.innerHTML='';post.body.split(/\n\n+/).forEach(part=>{const p=document.createElement('p');p.textContent=part;body.appendChild(p);});modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';close.focus();};const closeModal=()=>{modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';};document.addEventListener('click',e=>{const trigger=e.target.closest('[data-reflection]');if(trigger)openModal(trigger.dataset.reflection);});close.addEventListener('click',closeModal);modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeModal();});}
   const revealObserver='IntersectionObserver' in window?new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target);}});},{threshold:.08}):null;document.querySelectorAll('.reveal').forEach(el=>{if(revealObserver)revealObserver.observe(el);else el.classList.add('is-visible');});
-
-  const brandingHeroImage=document.querySelector('.branding-detail .branding-hero-image img');
-  if(brandingHeroImage){
-    brandingHeroImage.src='https://raw.githubusercontent.com/PATSPHERE/PATSPHERE.GITHUB.IO/e0c42adbd78b71ab055566b75f20ad69c8f70e66/assets/personal-branding.svg';
-    brandingHeroImage.alt='Executive desk with laptop, notebook, pen and personal branding quote';
-    const heroStyle=document.createElement('style');
-    heroStyle.textContent=`
-      .branding-detail .branding-hero-image{overflow:hidden!important}
-      .branding-detail .branding-hero-image::before{display:none!important}
-      .branding-detail .branding-hero-image blockquote{display:none!important}
-      .branding-detail .branding-hero-image img{width:200%!important;max-width:none!important;height:100%!important;object-fit:fill!important;object-position:center!important;filter:none!important;display:block!important;transform:translateX(-50%)!important}
-      @media (max-width:760px){.branding-detail .branding-hero-image img{width:200%!important;transform:translateX(-50%)!important}}
-    `;
-    document.head.appendChild(heroStyle);
-  }
-
   const i18n=document.createElement('script');
   i18n.src='assets/js/i18n.js';i18n.defer=true;i18n.addEventListener('load',()=>{const selectedPages=document.createElement('script');selectedPages.src='assets/js/i18n-selected-pages.js';selectedPages.defer=true;document.head.appendChild(selectedPages);});document.head.appendChild(i18n);
 })();
