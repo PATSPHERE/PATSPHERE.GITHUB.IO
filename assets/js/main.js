@@ -55,9 +55,11 @@
     brandingHeroImage.alt='Executive desk with laptop, notebook, pen and personal branding quote';
     const heroStyle=document.createElement('style');
     heroStyle.textContent=`
+      .branding-detail .branding-hero-image{overflow:hidden!important}
       .branding-detail .branding-hero-image::before{display:none!important}
       .branding-detail .branding-hero-image blockquote{display:none!important}
-      .branding-detail .branding-hero-image img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;filter:none!important;display:block!important}
+      .branding-detail .branding-hero-image img{width:200%!important;max-width:none!important;height:100%!important;object-fit:fill!important;object-position:center!important;filter:none!important;display:block!important;transform:translateX(-50%)!important}
+      @media (max-width:760px){.branding-detail .branding-hero-image img{width:200%!important;transform:translateX(-50%)!important}}
     `;
     document.head.appendChild(heroStyle);
   }
