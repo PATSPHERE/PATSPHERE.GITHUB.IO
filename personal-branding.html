@@ -9,15 +9,24 @@
 <title>Executive Personal Branding | PATSPHERE Advisory</title>
 <link rel="stylesheet" href="assets/css/styles.css">
 <style id="personal-branding-complete-fix">
-  .branding-detail .branding-hero-image{position:relative;overflow:hidden;background:#171b1e;min-height:100%}
+  .branding-detail .branding-hero{background:linear-gradient(110deg,#fffdfa 0 52%,#efe7da 52%)}
+  .branding-detail .branding-hero-layout{grid-template-columns:1.03fr .97fr;min-height:0;align-items:center}
+  .branding-detail .service-hero-copy{padding:30px 48px 30px 0}
+  .branding-detail .service-hero-copy h1{font-size:clamp(3.25rem,4vw,4.65rem);line-height:.96}
+  .branding-detail .branding-hero-image{position:relative;overflow:hidden;background:#171b1e;min-height:0;aspect-ratio:556/398;width:100%;align-self:center}
   .branding-detail .branding-hero-image::before{display:none!important}
   .branding-detail .branding-hero-image blockquote{display:none!important}
-  .branding-detail .branding-hero-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;filter:none}
-  @media (max-width:1024px){.branding-detail .branding-hero-image img{object-position:center}}
+  .branding-detail .branding-hero-image img{display:block;width:100%;height:100%;max-width:none;object-fit:contain;object-position:center;filter:none}
+  @media (max-width:1024px){
+    .branding-detail .branding-hero-layout{grid-template-columns:1fr 1fr}
+    .branding-detail .service-hero-copy{padding:28px 34px 28px 0}
+    .branding-detail .service-hero-copy h1{font-size:clamp(3rem,5vw,4rem)}
+  }
   @media (max-width:760px){
     .branding-detail .branding-hero-layout{grid-template-columns:1fr!important}
-    .branding-detail .branding-hero-image{min-height:0;aspect-ratio:556/398}
-    .branding-detail .branding-hero-image img{width:100%;height:100%;object-fit:cover;object-position:center}
+    .branding-detail .service-hero-copy{padding:38px 0 30px}
+    .branding-detail .branding-hero-image{width:100%;aspect-ratio:556/398}
+    .branding-detail .branding-hero-image img{width:100%;height:100%;object-fit:contain;object-position:center}
     .branding-detail .service-price-grid.four{grid-template-columns:1fr!important}
     .branding-detail .outcome-grid{grid-template-columns:1fr 1fr!important}
   }
@@ -61,6 +70,6 @@
   <section class="service-bottom-cta compact-cta"><div class="container"><div class="cta-monogram">PA</div><div><h2>พร้อมเริ่มต้นสร้างแบรนด์ของคุณ?</h2><p>นัดคุยเพื่อประเมินเป้าหมายและเลือกแพ็กเกจที่เหมาะกับคุณ</p></div><div class="button-row"><a class="btn outline-light" href="https://line.me/R/ti/p/%40237sdgzu" target="_blank" rel="noopener">LINE OA</a><a class="btn light" href="contact.html">Book a Consultation</a></div></div></section>
 </main>
 <footer class="site-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="index.html"><span class="brand-mark"><span>P</span><b>A</b></span><span class="brand-name">PATSPHERE<small>ADVISORY</small></span></a><p>Strategy. Identity. Impact.</p></div><div><h4>Focus</h4><p>Business Strategy<br>Executive Advisory<br>AI &amp; Business Transformation<br>Healthcare &amp; Wellness</p></div><div><h4>Contact</h4><p><a href="mailto:phatsha.thana@gmail.com">phatsha.thana@gmail.com</a><br><a href="https://line.me/R/ti/p/%40237sdgzu" target="_blank" rel="noopener">LINE OA</a><br><a href="https://www.linkedin.com/in/phatsha-thana-831160328/" target="_blank" rel="noopener">LinkedIn</a></p></div></div><div class="container copyright">© <span data-year></span> PATSPHERE Advisory. All rights reserved.</div></footer>
-<script src="assets/js/main.js?v=20260730-complete"></script>
+<script src="assets/js/main.js?v=20260730-hero-proportion-fix"></script>
 </body>
 </html>
