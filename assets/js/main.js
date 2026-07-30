@@ -121,7 +121,7 @@
 
   const brandingHeroImage=document.querySelector('.branding-detail .branding-hero-image img');
   if(brandingHeroImage){
-    brandingHeroImage.src='assets/images/branding-hero-approved.webp?v=20260730-1242';
+    brandingHeroImage.src='assets/images/branding-hero-approved-final.png?v=20260730-1258';
     brandingHeroImage.alt='Executive desk with laptop, notebook, pen and personal branding quote';
     const heroStyle=document.createElement('style');
     heroStyle.textContent=`
