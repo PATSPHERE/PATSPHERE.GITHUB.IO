@@ -1,0 +1,46 @@
+name: Apply approved executive image
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.tmp/executive-image.part*'
+      - '.github/workflows/apply-approved-executive-image.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Rebuild approved image and update page
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .tmp/executive-image.part0 .tmp/executive-image.part1 .tmp/executive-image.part2 .tmp/executive-image.part3 .tmp/executive-image.part4 > /tmp/executive-image.b64
+          base64 --decode /tmp/executive-image.b64 > assets/images/executive-branding-composite.webp
+          test -s assets/images/executive-branding-composite.webp
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('project-executive-positioning.html')
+          text = path.read_text(encoding='utf-8')
+          old = 'assets/images/executive-branding-composite.jpg'
+          new = 'assets/images/executive-branding-composite.webp'
+          if old not in text and new not in text:
+              raise SystemExit('Expected executive image reference not found')
+          text = text.replace(old, new)
+          text = text.replace('width="640" height="960"', 'width="640" height="959"')
+          path.write_text(text, encoding='utf-8')
+          PY
+          rm -f assets/images/executive-branding-composite.jpg
+          rm -f .tmp/executive-image.part*
+          rm -f .github/workflows/apply-approved-executive-image.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Replace executive positioning visual with approved image'
+          git push origin main
