@@ -32,12 +32,6 @@
 .about-lock-footer .brand-name{font-size:17px}
 .about-lock-footer .brand-name small{margin-top:4px;font-size:6px}
 
-/* Personal branding hero hotfix */
-.branding-detail .branding-hero-image::before{display:none!important}
-.branding-detail .branding-hero-image blockquote{display:none!important}
-.branding-detail .branding-hero-image{background:#071d35!important;min-height:0!important}
-.branding-detail .branding-hero-image img{width:100%!important;height:auto!important;min-height:0!important;object-fit:contain!important;object-position:center!important;filter:none!important}
-
 @media(max-width:760px){
   .brand{gap:13px;min-width:0}
   .brand-mark,.lock-monogram{width:54px;height:46px;flex-basis:54px;padding-right:14px;font-size:44px}
@@ -46,8 +40,6 @@
   .brand-name,.lock-brand .brand-name{font-size:17px}
   .brand-name small,.lock-brand .brand-name small{margin-top:4px;font-size:6.5px}
   .about-lock-footer .brand{min-width:0}
-  .branding-detail .branding-hero-image{width:100%!important;min-height:0!important;aspect-ratio:4/3!important}
-  .branding-detail .branding-hero-image img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;background:#071d35!important}
 }
 
 @media(max-width:380px){
