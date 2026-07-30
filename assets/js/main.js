@@ -118,13 +118,6 @@
   const modal=document.getElementById('reflection-modal');
   if(modal&&posts.length){const title=document.getElementById('modal-title'),cat=document.getElementById('modal-cat'),body=document.getElementById('modal-body'),close=modal.querySelector('.modal-close');const openModal=index=>{const post=posts[Number(index)];if(!post)return;title.textContent=post.title;cat.textContent=post.cat;body.innerHTML='';post.body.split(/\n\n+/).forEach(part=>{const p=document.createElement('p');p.textContent=part;body.appendChild(p);});modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';close.focus();};const closeModal=()=>{modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';};document.addEventListener('click',e=>{const trigger=e.target.closest('[data-reflection]');if(trigger)openModal(trigger.dataset.reflection);});close.addEventListener('click',closeModal);modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeModal();});}
   const revealObserver='IntersectionObserver' in window?new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target);}});},{threshold:.08}):null;document.querySelectorAll('.reveal').forEach(el=>{if(revealObserver)revealObserver.observe(el);else el.classList.add('is-visible');});
-
-  const brandingHeroImage=document.querySelector('.branding-detail .branding-hero-image img');
-  if(brandingHeroImage){
-    brandingHeroImage.src='assets/images/branding-hero-replacement.svg';
-    brandingHeroImage.alt='Executive branding across website and social platforms';
-  }
-
   const i18n=document.createElement('script');
   i18n.src='assets/js/i18n.js';
   i18n.defer=true;
