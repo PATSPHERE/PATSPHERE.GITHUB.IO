@@ -77,6 +77,10 @@
 .lock-footer h4{font:700 9px var(--sans);color:var(--gold-soft);margin:0 0 5px}
 .lock-footer a,.lock-footer span{display:block;font-size:8px;line-height:1.45;color:#e2e7ec}
 .lock-footer-brand{display:flex;gap:12px;align-items:center}
+/* Home footer only: restore the monogram typography overridden by .lock-footer span */
+.lock-footer-brand .lock-monogram{font-size:43px;line-height:1;color:#fff}
+.lock-footer-brand .lock-monogram>span{font-size:inherit;line-height:inherit;color:inherit}
+.lock-footer-brand .lock-monogram>b{font-size:inherit;line-height:inherit;color:var(--gold)}
 .lock-footer-brand strong{display:block;font:14px Georgia,serif;letter-spacing:.15em}
 .lock-footer-brand small{display:block;font-size:8px;letter-spacing:.25em;color:var(--gold-soft)}
 .lock-footer-brand em{display:block;font:italic 8px Georgia,serif;color:var(--gold-soft);margin-top:4px}
