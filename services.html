@@ -8,8 +8,36 @@
 <meta name="description" content="PATSPHERE Advisory — Strategy, executive advisory, AI transformation, healthcare and wellness.">
 <title>Services | PATSPHERE Advisory</title>
 <link rel="stylesheet" href="assets/css/styles.css">
+<style>
+  .services-page .services-hero{padding:78px 0 62px}
+  .services-page .services-hero h1{max-width:1120px;font-size:clamp(3.1rem,5.35vw,5.45rem);line-height:1.02}
+  .services-page .services-hero .lead{margin-bottom:0}
+  .services-page .services-list-section{padding-top:72px}
+  .services-page .service-overview{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;border:0;align-items:stretch}
+  .services-page .service-overview article,
+  .services-page .service-overview article:last-child{display:flex;flex-direction:column;gap:18px;padding:32px;border:1px solid var(--stone);background:#fff;min-height:340px}
+  .services-page .service-overview>article>span{font-size:2.35rem;line-height:1}
+  .services-page .service-overview article>div{display:flex;flex:1;flex-direction:column}
+  .services-page .service-overview article h2{font-size:clamp(1.75rem,2.35vw,2.45rem);margin-bottom:.5em}
+  .services-page .service-overview article p{color:var(--muted)}
+  .services-page .service-overview article p strong{color:var(--navy)}
+  .services-page .service-overview article .btn{align-self:flex-start;margin-top:auto}
+  @media (max-width:900px){
+    .services-page .services-hero{padding:70px 0 54px}
+    .services-page .services-hero h1{font-size:clamp(2.8rem,9vw,4.7rem)}
+    .services-page .service-overview{grid-template-columns:1fr}
+    .services-page .service-overview article,
+    .services-page .service-overview article:last-child{min-height:0}
+  }
+  @media (max-width:600px){
+    .services-page .services-hero{padding:54px 0 44px}
+    .services-page .services-list-section{padding-top:48px}
+    .services-page .service-overview article,
+    .services-page .service-overview article:last-child{padding:26px}
+  }
+</style>
 </head>
-<body>
+<body class="services-page">
 
 <header class="site-header">
   <div class="container header-inner">
@@ -22,8 +50,8 @@
   </div>
 </header>
 <main>
-<section class="page-hero compact"><div class="container"><p class="eyebrow">SERVICES</p><h1>Focused support for clearer decisions, stronger presence, and practical execution.</h1><p class="lead">Choose a starting point based on the outcome you need now.</p></div></section>
-<section class="section">
+<section class="page-hero compact services-hero"><div class="container"><p class="eyebrow">SERVICES</p><h1>Focused support for clearer decisions, stronger presence, and practical execution.</h1><p class="lead">Choose a starting point based on the outcome you need now.</p></div></section>
+<section class="section services-list-section">
   <div class="container">
     <div class="service-overview">
       <article><span>01</span><div><h2>Consulting &amp; Advisory</h2><p>For decisions that need structure, analysis, perspective, and practical next steps.</p><p><strong>Starting from 2,000 THB</strong></p><a class="btn primary" href="consulting.html">View packages</a></div></article>
