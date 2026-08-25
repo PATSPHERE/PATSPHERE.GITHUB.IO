@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0B3F8F">
+<meta name="robots" content="index,follow">
+<title>ReLearnOS — Individual AI Baseline Diagnostic</title>
+<style>
+:root{--navy:#0B3F8F;--blue:#1685F4;--cyan:#08C8D0;--green:#27B84A;--white:#ffffff;--bg:#f7fbfd;--paper:#ffffff;--text:#17324d;--muted:#64748b;--line:#dbe8ef;--soft:#ecf8fa}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans Thai",Tahoma,sans-serif;background:linear-gradient(180deg,#f7fbfd 0,#ffffff 45%,#f5fbf9 100%);color:var(--text)}
+.wrap{max-width:920px;margin:auto;padding:28px 18px 64px}.top{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:8px 0 20px}.brand{font-weight:900;letter-spacing:.04em;color:var(--navy);font-size:20px}.brand b{color:var(--cyan)}.under{font-size:11px;color:var(--muted);text-align:right}
+.hero{background:linear-gradient(135deg,var(--navy),#0c5ea8 58%,var(--cyan));color:#fff;border-radius:26px;padding:34px 34px 30px;box-shadow:0 20px 50px rgba(11,63,143,.16)}
+.hero h1{font-size:34px;line-height:1.2;margin:7px 0 10px}.hero p{font-size:16px;line-height:1.7;margin:0;color:#eaf7ff}.badge{display:inline-block;margin-top:16px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);font-size:13px}
+.section-title{margin:30px 0 8px;color:var(--navy);font-size:24px}.section-sub{color:var(--muted);line-height:1.6;margin:0 0 8px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px;margin-top:16px;box-shadow:0 8px 28px rgba(17,51,77,.05)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field label{display:block;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:7px}.field input,.field select{width:100%;border:1px solid var(--line);border-radius:12px;padding:13px 14px;background:#fff;color:var(--text);font-size:15px;outline:none}.field input:focus,.field select:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(8,200,208,.12)}
+.qno{font-size:12px;color:var(--blue);font-weight:800;letter-spacing:.08em}.q{font-size:20px;line-height:1.5;font-weight:800;color:var(--navy);margin:7px 0 16px}.opt{display:block;padding:13px 14px;border:1px solid var(--line);border-radius:12px;margin:9px 0;cursor:pointer;background:#fff;transition:.15s}.opt:hover{border-color:var(--cyan);background:#f8feff}.opt input{margin-right:9px;accent-color:var(--navy)}
+.actions{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}button{border:none;border-radius:12px;padding:14px 18px;font-size:16px;font-weight:800;cursor:pointer}.primary{background:var(--navy);color:white}.secondary{background:transparent;color:var(--navy);border:1px solid var(--navy)}
+.result{display:none;margin-top:24px;background:linear-gradient(145deg,#082f65,var(--navy) 55%,#086f82);color:white;border-radius:22px;padding:28px}.result h2{margin:0 0 6px}.profile-name{font-size:13px;color:#cceaf6;margin-bottom:20px}.dim{display:grid;grid-template-columns:1fr auto;gap:8px;margin:14px 0 6px}.bar{height:9px;background:rgba(255,255,255,.16);border-radius:20px;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,var(--cyan),#35d8b0,var(--green))}.note{font-size:12px;color:#d7e8f2;line-height:1.65;margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.18)}.small{font-size:12px;color:var(--muted);margin-top:16px;text-align:center}
+@media(max-width:680px){.grid{grid-template-columns:1fr}.hero{padding:28px 22px}.hero h1{font-size:28px}.top{align-items:flex-start}.under{max-width:190px}.q{font-size:18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><div class="brand">ReLearn<b>OS</b></div><div class="under">A Human &amp; Learning Business under ANABLER</div></div>
+  <section class="hero">
+    <div style="font-size:12px;font-weight:800;letter-spacing:.12em">PROTOTYPE DIAGNOSTIC</div>
+    <h1>Individual AI Baseline Diagnostic</h1>
+    <p>แบบประเมินรายบุคคลเพื่อดูพื้นฐานการทำงานร่วมกับ AI ของคุณ<br>เลือกคำตอบที่ใกล้กับสิ่งที่คุณ “น่าจะทำจริง” มากที่สุด</p>
+    <span class="badge">Profile + 8 Scenario Questions · ประมาณ 3–5 นาที</span>
+  </section>
+
+  <h2 class="section-title">ข้อมูลผู้ตอบ</h2>
+  <p class="section-sub">ข้อมูลนี้ใช้เพื่อช่วยอ่านผลตามบทบาทและบริบทของงานในเวอร์ชันทดลองนี้</p>
+  <div class="card">
+    <div class="grid">
+      <div class="field"><label>ชื่อ–นามสกุล</label><input id="fullname" type="text" placeholder="เช่น XXX XXX"></div>
+      <div class="field"><label>ตำแหน่ง (Position / Role)</label><input id="position" type="text" placeholder="เช่น Manager / Officer / Engineer"></div>
+      <div class="field"><label>แผนก (Department)</label><input id="department" type="text" placeholder="เช่น Operations / HR / Engineering"></div>
+      <div class="field"><label>การใช้ AI ในปัจจุบัน</label><select id="currentUsage"><option value="">เลือกคำตอบ</option><option>ยังไม่เคยใช้</option><option>เคยลองใช้บ้าง</option><option>ใช้เป็นบางครั้ง</option><option>ใช้เป็นประจำ</option><option>ใช้เป็นส่วนหนึ่งของ Workflow</option></select></div>
+    </div>
+  </div>
+
+  <h2 class="section-title">8 Scenario Questions</h2>
+  <p class="section-sub">ไม่มีคำตอบแบบ “เก่งที่สุด” ทุกข้อ จุดประสงค์คือดูแนวโน้มวิธีคิดและวิธีทำงานร่วมกับ AI</p>
+  <form id="quiz"></form>
+  <div class="actions"><button class="primary" type="button" onclick="submitQuiz()">ดูผลเบื้องต้น</button><button class="secondary" type="button" onclick="resetQuiz()">เริ่มใหม่</button></div>
+
+  <div id="result" class="result"><h2>Individual Baseline Profile — Demo</h2><div id="who" class="profile-name"></div><div id="profile"></div><div class="note">ผลนี้เป็น Prototype สำหรับทดลองเครื่องมือเท่านั้น ยังไม่ใช่ Scoring Model ฉบับล็อก และหน้านี้คำนวณผลบนอุปกรณ์ของผู้ตอบโดยตรงโดยไม่ส่งหรือบันทึกข้อมูลออกจากหน้าเว็บ</div></div>
+  <div class="small">Prototype V1.3 — ReLearnOS AI Baseline Diagnostic</div>
+</div>
+<script>
+const questions=[
+["AI สรุปรายงานให้คุณได้ดี แต่คุณมีเวลาตรวจเพียง 10 นาที คุณจะทำอย่างไร?",["อ่านสรุปทั้งหมดเพื่อดูว่าภาพรวมสมเหตุสมผล","ตรวจข้อมูลสำคัญที่มีผลต่อการตัดสินใจกับต้นทาง","ให้ AI ตรวจทานอีกครั้งและระบุจุดที่ไม่มั่นใจ","ตรวจเฉพาะส่วนที่ต่างจากสิ่งที่คุณคาดไว้"]],
+["คุณได้รับงานใหม่ที่ไม่คุ้นเคย ข้อมูลยังไม่ครบ และผลลัพธ์จะถูกนำไปใช้ตัดสินใจ คุณจะเริ่มอย่างไร?",["ให้ AI ช่วยเสนอสิ่งที่ควรรู้เพิ่มเติมก่อนเริ่มงาน","ระบุสิ่งที่รู้ สิ่งที่ยังไม่รู้ และข้อมูลที่ต้องมีก่อนใช้ AI","ให้ AI ทำร่างแรกเพื่อให้เห็นช่องว่างของข้อมูล","หาเคสใกล้เคียงมาเป็นฐาน แล้วให้ AI ช่วยเปรียบเทียบ"]],
+["AI เสนอคำตอบที่ต่างจากความเห็นของคุณ แต่เหตุผลก็น่าเชื่อถือ คุณจะทำอะไรต่อ?",["ขอให้ AI อธิบายสมมติฐานและเหตุผลเพิ่มเติม","หาแหล่งข้อมูลอื่นมาเปรียบเทียบ","ทบทวนว่าความคิดเดิมของตัวเองอาจมีอคติหรือไม่","ตรวจหลักฐาน สมมติฐาน และข้อจำกัดของทั้งสองทางก่อนตัดสินใจ"]],
+["คุณต้องเลือกงานหนึ่งอย่างเพื่อทดลองใช้ AI ก่อน คุณจะเลือกแบบไหน?",["งานที่ใช้เวลาของคนมากที่สุด","งานที่เกิดซ้ำบ่อยและมีรูปแบบค่อนข้างชัด","งานที่เกิดข้อผิดพลาดหรือการแก้ไขบ่อย","งานที่มีข้อมูลพร้อมและตรวจผลลัพธ์ได้ชัดเจน"]],
+["AI บอกว่า “ยอดรวม = 1,248,750 บาท” จากไฟล์ที่คุณให้ แต่ไม่สามารถบอกได้ว่าตัวเลขมาจากข้อมูลส่วนใด คุณจะยืนยันอย่างไร?",["ให้ AI คำนวณใหม่อีกครั้ง","ตรวจตัวเลขกลับกับข้อมูลต้นทาง","ให้ AI อีกเครื่องมือหนึ่งช่วยตรวจ","เทียบกับข้อมูลช่วงก่อนว่าตัวเลขสมเหตุสมผลหรือไม่"]],
+["คุณต้องใช้ AI ช่วยสรุปไฟล์ที่มีชื่อ เบอร์โทร และรายละเอียดของลูกค้า สิ่งแรกที่คุณควรยืนยันคืออะไร?",["เครื่องมือ AI สามารถสรุปไฟล์ประเภทนี้ได้หรือไม่","งานนี้จำเป็นต้องใช้ข้อมูลทั้งหมดในไฟล์หรือไม่","องค์กรอนุญาตให้นำข้อมูลประเภทนี้เข้าสู่เครื่องมือดังกล่าวหรือไม่","สามารถลบชื่อและเบอร์โทรออกก่อนใช้งานได้หรือไม่"]],
+["งานที่คุณใช้ AI ช่วยเป็นประจำเริ่มให้ผลลัพธ์ไม่ตรงกับสิ่งที่ต้องการ คุณจะทำอย่างไร?",["ปรับคำสั่งให้ละเอียดขึ้นก่อน","ตรวจว่าข้อมูลหรือบริบทที่ใช้เปลี่ยนไปหรือไม่","ทดลองเครื่องมืออื่นกับงานเดียวกัน","เทียบผลลัพธ์ปัจจุบันกับสิ่งที่ต้องการ แล้วหาว่าความคลาดเคลื่อนเกิดขึ้นตรงขั้นตอนไหน"]],
+["ในช่วง 30 วันที่ผ่านมา ข้อใดใกล้เคียงกับการใช้ AI ในงานของคุณมากที่สุด?",["ใช้ช่วยค้นหา ถาม หรือสร้างงานบางครั้ง","ใช้เป็นประจำกับงานบางประเภทเพื่อช่วยประหยัดเวลา","ใช้ช่วยวิเคราะห์ คิดทางเลือก หรือสนับสนุนการตัดสินใจ","ปรับขั้นตอนการทำงานบางส่วนให้คนและ AI ทำงานร่วมกัน"]]
+];
+const form=document.getElementById('quiz');questions.forEach((item,i)=>{const card=document.createElement('div');card.className='card';card.innerHTML=`<div class="qno">QUESTION ${i+1}</div><div class="q">${item[0]}</div>`+item[1].map((o,j)=>`<label class="opt"><input type="radio" name="q${i+1}" value="${j}"> ${o}</label>`).join('');form.appendChild(card)});
+const maps=[{J:[1,4,2,2]},{U:[2,4,2,2]},{J:[2,2,2,4]},{U:[1,3,2,4]},{K:[1,4,1,1],J:[1,4,1,1]},{K:[1,2,4,2]},{A:[1,2,1,4]},{U:[1,2,3,4],A:[1,2,2,4]}];
+function submitQuiz(){const fullname=document.getElementById('fullname').value.trim();const position=document.getElementById('position').value.trim();const department=document.getElementById('department').value.trim();const usage=document.getElementById('currentUsage').value;if(!fullname||!position||!department||!usage){alert('กรุณากรอกข้อมูลผู้ตอบให้ครบ');return}let ans=[];for(let i=1;i<=8;i++){const x=document.querySelector(`input[name=q${i}]:checked`);if(!x){alert(`กรุณาตอบข้อ ${i}`);return}ans.push(+x.value)}let totals={K:0,U:0,J:0,A:0},counts={K:0,U:0,J:0,A:0};ans.forEach((v,i)=>{const m=maps[i];Object.keys(m).forEach(k=>{totals[k]+=m[k][v];counts[k]++})});const labels={K:'KNOW — ความเข้าใจพื้นฐาน',U:'USE — การนำไปใช้',J:'JUDGE — การตรวจสอบและตัดสินใจ',A:'ADAPT — การปรับวิธีทำงาน'};let out='';Object.keys(labels).forEach(k=>{const pct=Math.round((totals[k]/(counts[k]*4))*100);out+=`<div class="dim"><b>${labels[k]}</b><span>${pct}%</span></div><div class="bar"><div class="fill" style="width:${pct}%"></div></div>`});document.getElementById('who').textContent=`${fullname} · ${position} · ${department} · Current AI Usage: ${usage}`;document.getElementById('profile').innerHTML=out;document.getElementById('result').style.display='block';document.getElementById('result').scrollIntoView({behavior:'smooth'})}
+function resetQuiz(){document.getElementById('quiz').reset();document.getElementById('fullname').value='';document.getElementById('position').value='';document.getElementById('department').value='';document.getElementById('currentUsage').value='';document.getElementById('result').style.display='none';window.scrollTo({top:0,behavior:'smooth'})}
+</script>
+</body>
+</html>
