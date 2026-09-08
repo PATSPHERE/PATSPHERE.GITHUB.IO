@@ -16,11 +16,9 @@
 <header class="site-header"><div class="container header-inner"><a class="brand" href="index.html" aria-label="PATSPHERE Advisory home"><span class="brand-mark"><span>P</span><b>A</b></span><span class="brand-name">PATSPHERE<small>ADVISORY</small></span></a><button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button><nav class="main-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="reflections.html" class="active">Reflections</a><a href="contact.html">Contact</a><a class="nav-line" href="https://line.me/R/ti/p/%40237sdgzu" target="_blank" rel="noopener">LINE OA</a></nav></div></header>
 <main>
 <section class="page-hero reflections-hero"><div class="container reflections-hero-grid"><div><p class="eyebrow">REFLECTIONS &amp; INSIGHTS</p><h1>Thoughts shaped by experience, observation, and the work behind the work.</h1><p class="lead">Think deeper · Act wiser · Grow together</p></div><img class="hero-art reflection-hero-image" src="assets/images/reflections/reflection-06.jpeg" alt="Thinking with AI reflection visual" width="680" height="849" loading="eager" decoding="async"></div></section>
-
 <section class="section soft"><div class="container">
 <div class="section-head"><div><p class="eyebrow">REFLECTIONS &amp; INSIGHTS</p><h2>Explore ideas in two ways.</h2></div></div>
 <div class="content-switch" aria-label="Content type filter"><button class="active" data-content="all">All</button><button data-content="reflections">Reflections</button><button data-content="insights">Insights</button></div>
-
 <div class="insights-block" data-content-block="insights">
 <p class="eyebrow">LATEST INSIGHT</p>
 <div class="insight-card">
@@ -28,19 +26,15 @@
 <div class="insight-visual" aria-hidden="true"><strong>Better AI<br>should not simply<br>agree with us.</strong></div>
 </div>
 </div>
-
 <div class="reflection-content" data-content-block="reflections">
 <section class="featured-reflection"><p class="eyebrow">FEATURED REFLECTION</p><div class="featured-card"><div class="featured-media"><img src="assets/images/reflections/reflection-01.webp" alt="Good advice does not begin with solutions. It begins with the right diagnosis." width="800" height="800" loading="eager" decoding="async"></div><div><span class="badge">Weekly Reflection</span><h2 id="featured-title">Good advice does not begin with solutions. It begins with the right diagnosis.</h2><p id="featured-excerpt">The role of an advisor is not to answer quickly. It is to identify what is actually creating the problem.</p><button class="btn primary" data-reflection="0">Read reflection</button></div></div></section>
 <div class="section-head" style="margin-top:56px"><div><p class="eyebrow">EXPLORE REFLECTIONS</p><h2>Browse by theme.</h2></div></div><div class="filters"><button class="filter-btn active" data-filter="All">All</button><button class="filter-btn" data-filter="Reflection &amp; Growth">Reflection &amp; Growth</button><button class="filter-btn" data-filter="Strategy &amp; Decisions">Strategy &amp; Decisions</button><button class="filter-btn" data-filter="Leadership &amp; Collaboration">Leadership &amp; Collaboration</button><button class="filter-btn" data-filter="AI &amp; Transformation">AI &amp; Transformation</button><button class="filter-btn" data-filter="Healthcare &amp; Human-Centred Impact">Healthcare &amp; Human-Centred Impact</button></div><div class="reflection-grid" id="reflection-grid"></div>
 </div>
 </div></section>
-
 <section class="linkedin-strip"><div class="container"><div><strong>More reflections and insights are shared regularly on LinkedIn.</strong><p>Read short-form thinking on LinkedIn, then explore deeper Insights here on PATSPHERE.</p></div><a class="btn primary" href="https://www.linkedin.com/in/phatsha-thana-831160328/recent-activity/all/" target="_blank" rel="noopener">Connect on LinkedIn</a></div></section>
 <div class="modal" id="reflection-modal" aria-hidden="true"><article class="modal-panel"><button class="modal-close" aria-label="Close">×</button><p class="eyebrow" id="modal-cat"></p><h2 id="modal-title"></h2><div id="modal-body"></div></article></div>
 </main>
 <footer class="site-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="index.html"><span class="brand-mark"><span>P</span><b>A</b></span><span class="brand-name">PATSPHERE<small>ADVISORY</small></span></a><p>Strategy. Identity. Impact.</p></div><div><h4>Focus</h4><p>Business Strategy<br>Executive Advisory<br>AI &amp; Business Transformation<br>Healthcare &amp; Wellness</p></div><div><h4>Contact</h4><p><a href="mailto:phatsha.thana@gmail.com">phatsha.thana@gmail.com</a><br><a href="https://line.me/R/ti/p/%40237sdgzu" target="_blank" rel="noopener">LINE OA</a><br><a href="https://www.linkedin.com/in/phatsha-thana-831160328/" target="_blank" rel="noopener">LinkedIn</a></p></div></div><div class="container copyright">© <span data-year></span> PATSPHERE Advisory. All rights reserved.</div></footer>
-<script src="assets/js/reflections-data-a.js"></script><script src="assets/js/reflections-data-b.js"></script><script src="assets/js/main.js"></script>
-<script>
-(function(){const buttons=[...document.querySelectorAll('[data-content]')];const insight=document.querySelector('[data-content-block="insights"]');const reflections=document.querySelector('[data-content-block="reflections"]');buttons.forEach(btn=>btn.addEventListener('click',()=>{buttons.forEach(b=>b.classList.remove('active'));btn.classList.add('active');const mode=btn.dataset.content;insight.classList.toggle('hidden',mode==='reflections');reflections.classList.toggle('hidden',mode==='insights');}));})();
-</script>
+<script src="assets/js/reflections-data-a.js"></script><script src="assets/js/reflections-data-b.js"></script><script src="assets/js/main.js"></script><script src="assets/js/insights-i18n.js"></script>
+<script>(function(){const buttons=[...document.querySelectorAll('[data-content]')];const insight=document.querySelector('[data-content-block="insights"]');const reflections=document.querySelector('[data-content-block="reflections"]');buttons.forEach(btn=>btn.addEventListener('click',()=>{buttons.forEach(b=>b.classList.remove('active'));btn.classList.add('active');const mode=btn.dataset.content;insight.classList.toggle('hidden',mode==='reflections');reflections.classList.toggle('hidden',mode==='insights');}));})();</script>
 </body></html>
