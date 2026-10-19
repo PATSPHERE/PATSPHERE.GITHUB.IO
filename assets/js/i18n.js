@@ -13,8 +13,8 @@ add('.main-nav a[href="projects.html"]',P('Projects','ผลงาน'));
 add('.main-nav a[href="reflections.html"]',P('Reflections','บทความ'));
 add('.main-nav a[href="contact.html"]',P('Contact','ติดต่อ'));
 add('.nav-consult',P('Book a Consultation','นัดหมายปรึกษา'));
-add('.footer-grid h4:first-of-type',P('Focus','ความเชี่ยวชาญ'));
-add('.footer-grid h4:last-of-type',P('Contact','ติดต่อ'));
+add('.footer-grid>div:nth-child(2) h4',P('Focus','ความเชี่ยวชาญ'));
+add('.footer-grid>div:nth-child(3) h4',P('Contact','ติดต่อ'));
 
 if(page==='index.html'){
  add('.lock-hero-copy h1',P('Strategy.<br>Identity.<br>Impact.','กลยุทธ์<br>ตัวตน<br>ผลลัพธ์'));
