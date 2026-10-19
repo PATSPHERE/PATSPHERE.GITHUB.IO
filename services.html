@@ -22,6 +22,14 @@
   .services-page .service-overview article p{color:var(--muted)}
   .services-page .service-overview article p strong{color:var(--navy)}
   .services-page .service-overview article .btn{align-self:flex-start;margin-top:auto}
+  .services-page .service-overview .service-digital-card{position:relative;overflow:hidden;border-color:#204f86;background:linear-gradient(145deg,#08213c 0%,#0c3970 62%,#0b5f5a 145%);color:#fff}
+  .services-page .service-overview .service-digital-card::before{content:"";position:absolute;width:260px;height:260px;right:-95px;top:-94px;border:1px solid rgba(69,224,205,.42);border-radius:50%;box-shadow:0 0 0 22px rgba(69,224,205,.05),0 0 0 50px rgba(69,224,205,.045)}
+  .services-page .service-overview .service-digital-card::after{content:"";position:absolute;width:120%;height:1px;left:-10%;bottom:76px;background:linear-gradient(90deg,transparent,rgba(95,220,222,.78),transparent);transform:rotate(-18deg)}
+  .services-page .service-overview .service-digital-card>span,.services-page .service-overview .service-digital-card h2{color:#fff}
+  .services-page .service-overview .service-digital-card p,.services-page .service-overview .service-digital-card p strong{color:#d5e8f3}
+  .services-page .service-digital-card>div{position:relative;z-index:1}
+  .services-page .service-tech-mark{display:inline-grid;place-items:center;width:42px;height:42px;margin-bottom:20px;border:1px solid rgba(105,229,211,.8);border-radius:50%;color:#79f0d7;font-size:1.35rem;box-shadow:0 0 28px rgba(56,208,205,.24)}
+  .services-page .service-digital-card .btn{border-color:#86e8d7;background:#dffcf4;color:#092b43}
   @media (max-width:900px){
     .services-page .services-hero{padding:70px 0 54px}
     .services-page .services-hero h1{font-size:clamp(2.8rem,9vw,4.7rem)}
@@ -56,7 +64,7 @@
     <div class="service-overview">
       <article><span>01</span><div><h2>Consulting &amp; Advisory</h2><p>For decisions that need structure, analysis, perspective, and practical next steps.</p><p><strong>Starting from 2,000 THB</strong></p><a class="btn primary" href="consulting.html">View packages</a></div></article>
       <article><span>02</span><div><h2>Executive Personal Branding</h2><p>For leaders and professionals who need a clearer position and a more credible presence across channels.</p><p><strong>Starting from 5,000 THB</strong></p><a class="btn primary" href="personal-branding.html">View packages</a></div></article>
-      <article><span>03</span><div><h2>Website Services</h2><p>For businesses and professionals who need a focused digital home that supports trust and conversion.</p><p><strong>Starting from 7,000 THB</strong></p><a class="btn primary" href="website-services.html">View packages</a></div></article>
+      <article class="service-digital-card"><span>03</span><div><span class="service-tech-mark" aria-hidden="true">✦</span><h2>Digital &amp; Intelligent Work Solutions</h2><p>For organisations ready to turn digital tools, intelligent systems, and learning into practical ways of working.</p><p><strong>Agents · RELEARN OS · Websites</strong></p><a class="btn primary" href="digital-intelligent-work.html">Explore solutions</a></div></article>
     </div>
   </div>
 </section>

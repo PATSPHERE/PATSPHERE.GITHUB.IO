@@ -38,7 +38,7 @@ if(page==='services.html'){
  add('.page-hero .eyebrow',P('SERVICES','บริการ'));
  add('.page-hero h1',P('Focused support for clearer decisions, stronger presence, and practical execution.','การสนับสนุนที่ตรงจุด เพื่อการตัดสินใจที่ชัดขึ้น ภาพลักษณ์ที่แข็งแรงขึ้น และการลงมือทำได้จริง'));
  add('.page-hero .lead',P('Choose a starting point based on the outcome you need now.','เลือกจุดเริ่มต้นจากผลลัพธ์ที่คุณต้องการในตอนนี้'));
- add('.service-overview h2',[P('Consulting &amp; Advisory','การให้คำปรึกษาและคำแนะนำเชิงกลยุทธ์'),P('Executive Personal Branding','การสร้างแบรนด์บุคคลสำหรับผู้บริหาร'),P('Website Services','บริการเว็บไซต์')]);
+ add('.service-overview h2',[P('Consulting &amp; Advisory','การให้คำปรึกษาและคำแนะนำเชิงกลยุทธ์'),P('Executive Personal Branding','การสร้างแบรนด์บุคคลสำหรับผู้บริหาร'),P('Digital &amp; Intelligent Work Solutions','โซลูชันดิจิทัลและการทำงานอัจฉริยะ')]);
  add('.service-overview .btn',P('View packages','ดูแพ็กเกจ'));
 }
 if(page==='projects.html'){
