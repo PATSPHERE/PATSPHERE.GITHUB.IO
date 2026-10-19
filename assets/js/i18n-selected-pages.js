@@ -87,14 +87,17 @@
   if (page === 'project-speaking.html') {
     add('.project-detail-hero .eyebrow', P('PROJECT 04', 'โครงการ 04'));
     add('.project-detail-hero h1', P('Speaking &amp; Knowledge Sharing', 'การบรรยายและการแบ่งปันความรู้'));
-    add('.project-detail-hero .lead', P('Sharing practical insights that inspire action and support growth.', 'แบ่งปันมุมมองที่นำไปใช้ได้จริง เพื่อสร้างแรงบันดาลใจในการลงมือทำและสนับสนุนการเติบโต'));
-    add('.project-detail-hero .lead + p', P('Turning experience into practical ideas that help people see possibilities, make clearer decisions, and move forward.', 'เปลี่ยนประสบการณ์ให้เป็นแนวคิดที่ใช้ได้จริง ช่วยให้ผู้คนมองเห็นความเป็นไปได้ ตัดสินใจได้ชัดขึ้น และก้าวต่อไป'));
-    add('.project-story .eyebrow', P('WHAT THIS WORK REFLECTS', 'สิ่งที่งานนี้สะท้อน'));
-    add('.project-story h2', P('When we share what works, we create impact beyond our own work.', 'เมื่อเราแบ่งปันสิ่งที่ได้ผล เราสร้างผลกระทบที่ไกลกว่างานของเราเอง'));
-    add('.project-story > p', P('Speaking, facilitating, and sharing experience have shown that knowledge becomes valuable when people can connect it to their own context—and use it to think or act differently.', 'การบรรยาย การอำนวยกระบวนการ และการแบ่งปันประสบการณ์ แสดงให้เห็นว่าความรู้มีคุณค่าเมื่อผู้คนเชื่อมโยงเข้ากับบริบทของตนเอง และนำไปใช้เพื่อคิดหรือลงมือทำในรูปแบบใหม่'));
-    add('.focus-tags span', [P('Keynote Speaking', 'การบรรยายหลัก'), P('Workshops', 'เวิร์กช็อป'), P('Panel Discussions', 'เสวนา'), P('Knowledge Sharing', 'การแบ่งปันความรู้')]);
-    add('.speaking-images h3', [P('Executive Talk &amp; Stage Presence', 'การบรรยายสำหรับผู้บริหารและการสื่อสารบนเวที'), P('Workshop &amp; Team Learning', 'เวิร์กช็อปและการเรียนรู้ของทีม')]);
-    add('.speaking-images p', [P('Communicating complex ideas with clarity, purpose, and practical relevance.', 'สื่อสารแนวคิดที่ซับซ้อนด้วยความชัดเจน เป้าหมาย และความเชื่อมโยงกับการใช้งานจริง'), P('Creating space for reflection, discussion, and ideas people can apply to their work.', 'สร้างพื้นที่สำหรับการทบทวน การสนทนา และแนวคิดที่ผู้คนนำไปใช้กับงานได้')]);
+    add('.project-detail-hero .lead', P('Turning experience into practical learning that people can use in their real work.', 'เปลี่ยนประสบการณ์ให้เป็นการเรียนรู้ที่ผู้คนนำไปใช้กับงานจริงของตนได้'));
+    add('.project-detail-hero .lead + p', P('Knowledge becomes meaningful when people can connect it to their own context, make clearer decisions, and take the next step with confidence.', 'ความรู้มีความหมายเมื่อผู้คนเชื่อมโยงเข้ากับบริบทของตนเอง ตัดสินใจได้ชัดขึ้น และก้าวต่อไปอย่างมั่นใจ'));
+    add('.project-story:not(.featured-speaking-story) .eyebrow', P('WHAT THIS WORK REFLECTS', 'สิ่งที่งานนี้สะท้อน'));
+    add('.project-story:not(.featured-speaking-story) h2', P('When insight becomes usable, it can change how people work.', 'เมื่อความเข้าใจนำไปใช้ได้จริง วิธีทำงานก็เปลี่ยนได้'));
+    add('.project-story:not(.featured-speaking-story) > p', P('Speaking and facilitation are not only about sharing ideas. They are about creating the conditions for people to ask better questions, see possibilities in their own work, and move from understanding to action.', 'การบรรยายและการอำนวยกระบวนการไม่ได้เป็นเพียงการแบ่งปันความคิด แต่เป็นการสร้างเงื่อนไขให้ผู้คนตั้งคำถามได้ดีขึ้น มองเห็นความเป็นไปได้ในงานของตนเอง และเปลี่ยนความเข้าใจให้เป็นการลงมือทำ'));
+    add('.focus-tags span', [P('Keynote Speaking', 'การบรรยายหลัก'), P('Facilitation', 'การอำนวยกระบวนการ'), P('Workshops', 'เวิร์กช็อป'), P('Knowledge Sharing', 'การแบ่งปันความรู้')]);
+    add('.featured-speaking-story .eyebrow', P('FEATURED ENGAGEMENT', 'ผลงานเด่น'));
+    add('.featured-speaking-story h2', P('QPM × RELEARN OS<br>AI Foundations for Property Management Teams', 'QPM × RELEARN OS<br>AI พื้นฐานสำหรับทีมบริหารจัดการอสังหาริมทรัพย์'));
+    add('.featured-speaking-story > p', P('Designed and delivered an onsite AI foundations session for QPM teams—making AI feel approachable, relevant, and safe to explore through familiar work such as email, meeting notes, and data. The focus was not technology for its own sake, but helping people begin with real work while keeping human judgement at the centre.', 'ออกแบบและถ่ายทอดการอบรม AI พื้นฐานแบบ Onsite ให้กับทีม QPM เพื่อให้ AI เป็นเรื่องที่เข้าถึงได้ เกี่ยวข้องกับงาน และเริ่มทดลองใช้ได้อย่างปลอดภัยผ่านงานคุ้นเคย เช่น อีเมล บันทึกการประชุม และข้อมูล โดยมีเป้าหมายให้ผู้เรียนเริ่มจากงานจริงและคงการใช้ดุลยพินิจของมนุษย์ไว้เป็นศูนย์กลาง'));
+    add('.speaking-images h3', [P('Practical AI, Grounded in Real Work', 'AI ที่เริ่มจากงานจริง'), P('Learning Designed for Adoption', 'การเรียนรู้ที่ออกแบบเพื่อให้เริ่มใช้ได้จริง')]);
+    add('.speaking-images p', [P('Introducing AI through clear, familiar examples so people can see where it can support their everyday work.', 'แนะนำ AI ผ่านตัวอย่างที่ชัดเจนและคุ้นเคย เพื่อให้ผู้เรียนเห็นว่า AI ช่วยงานประจำวันของตนได้ตรงไหน'), P('Combining practical demonstration, guided reflection, and responsible-use principles to help teams begin with confidence.', 'ผสานการสาธิต การชวนคิดอย่างมีแนวทาง และหลักการใช้อย่างรับผิดชอบ เพื่อให้ทีมเริ่มต้นได้อย่างมั่นใจ')]);
   }
 
   const titles={
