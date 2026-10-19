@@ -23,6 +23,11 @@ if(page==='index.html'){
  add('.lock-hero-copy .btn.primary',P('Discover Services','ดูบริการ'));
  add('.lock-expertise h3',[P('Business Strategy','กลยุทธ์ธุรกิจ'),P('Executive Advisory','ที่ปรึกษาผู้บริหาร'),P('AI &amp; Business Transformation','AI และการเปลี่ยนผ่านธุรกิจ'),P('Healthcare &amp; Wellness','สุขภาพและเวลเนส')]);
  add('.lock-section-title h2',P('Core Services','บริการหลัก'));
+ add('.lock-service-card h3',[P('A. Consulting &amp; Advisory','A. การให้คำปรึกษาและคำแนะนำเชิงกลยุทธ์'),P('B. Executive Personal Branding','B. การสร้างแบรนด์บุคคลสำหรับผู้บริหาร'),P('C. Digital &amp; Intelligent Work Solutions','C. โซลูชันดิจิทัลและการทำงานอัจฉริยะ')]);
+ add('.lock-service-card p:not(.lock-service-kicker)',[P('Clarity for complex decisions and strategic next steps.','ความชัดเจนสำหรับการตัดสินใจที่ซับซ้อนและก้าวต่อไปเชิงกลยุทธ์'),P('Build a trusted, visible, and consistent executive presence.','สร้างตัวตนผู้บริหารที่น่าเชื่อถือ ชัดเจน และสม่ำเสมอ'),P('Intelligent systems, practical capability, and a credible digital presence.','ระบบอัจฉริยะ การพัฒนาความสามารถที่นำไปใช้ได้จริง และตัวตนดิจิทัลที่น่าเชื่อถือ')]);
+ add('.lock-service-kicker',P('DIGITAL &amp; INTELLIGENT WORK','ดิจิทัลและการทำงานอัจฉริยะ'));
+ add('.lock-service-card footer strong',[P('From 2,000 THB','เริ่มต้น 2,000 บาท'),P('From 5,000 THB','เริ่มต้น 5,000 บาท'),P('Agents · RELEARN OS · Websites','Agents · RELEARN OS · เว็บไซต์')]);
+ add('.lock-service-card footer span',[P('Explore Service →','ดูบริการ →'),P('Explore Service →','ดูบริการ →'),P('Explore solutions →','ดูโซลูชัน →')]);
 }
 if(page==='about.html'){
  add('.about-lock-intro .eyebrow',P('ABOUT PATSPHERE','เกี่ยวกับ PATSPHERE'));
@@ -39,7 +44,7 @@ if(page==='services.html'){
  add('.page-hero h1',P('Focused support for clearer decisions, stronger presence, and practical execution.','การสนับสนุนที่ตรงจุด เพื่อการตัดสินใจที่ชัดขึ้น ภาพลักษณ์ที่แข็งแรงขึ้น และการลงมือทำได้จริง'));
  add('.page-hero .lead',P('Choose a starting point based on the outcome you need now.','เลือกจุดเริ่มต้นจากผลลัพธ์ที่คุณต้องการในตอนนี้'));
  add('.service-overview h2',[P('Consulting &amp; Advisory','การให้คำปรึกษาและคำแนะนำเชิงกลยุทธ์'),P('Executive Personal Branding','การสร้างแบรนด์บุคคลสำหรับผู้บริหาร'),P('Digital &amp; Intelligent Work Solutions','โซลูชันดิจิทัลและการทำงานอัจฉริยะ')]);
- add('.service-overview .btn',P('View packages','ดูแพ็กเกจ'));
+ add('.service-overview .btn',[P('View packages','ดูแพ็กเกจ'),P('View packages','ดูแพ็กเกจ'),P('Explore solutions','ดูโซลูชัน')]);
 }
 if(page==='projects.html'){
  add('.page-hero .eyebrow',P('SELECTED EXPERIENCE','ประสบการณ์ที่คัดเลือก'));
